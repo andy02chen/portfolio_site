@@ -6,15 +6,18 @@ html {
     scroll-padding-top: 70px;
     overflow-x: hidden;
 }
+
 body {
     margin: 0;
     background-color: #3f80e8;
 }
 
-.background {
+.background-img {
     height: 100vh;
     width: 100vw;
     position: relative;
+    object-fit: cover;
+    z-index: 0;
 }
 
 #navbar {
@@ -59,18 +62,44 @@ section {
     width: 100vw;
 }
 
-div {
+section:last-of-type{
+    height: 200px;
+}
+
+.background-text {
+    z-index: 3;
+    color: white;
     background-color: black;
     opacity: 70%;
+    z-index: 2;
+    border: 2px solid transparent;
+}
+
+#welcome-msg {
+    top: 10%;
+    left: 5%;
+}
+
+#intro-text {
+    top: 10%;
+    right: 20%;
+    width: calc(100vw * 5%);
+}
+
+#profile-pic {
+    left: 5%;
+    top: 50%;
 }
 
 h1 {
     font-size: 5rem;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    
 }
 
+.small_txt {
+    font-size: 16px;
+}
 
 
 @media only screen and (min-width: 600px) {
