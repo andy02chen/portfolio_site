@@ -10,7 +10,6 @@ html {
 
 body {
     margin: 0;
-    padding-left: 15px;
     background-color: var(--blue);
 }
 
@@ -25,8 +24,8 @@ body {
 #navbar {
     position: sticky;
     background: #333;
-    border: 2px solid black;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin: 0px;
     width: 100%;
     top: 0px;
@@ -39,7 +38,7 @@ body {
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
     overflow: hidden;
 }
 
@@ -149,15 +148,22 @@ section:last-of-type{
 
 h1 {
     font-size: 5rem;
-    position: relative;
+    /* position: relative; */
 }
 
 .small_txt {
-    display: flex;
     font-size: 1.25rem;
     flex-wrap: wrap;
     width: 100%;
     margin: 0;
+}
+
+.small_txt a {
+    color: var(--blue);
+}
+
+.small_txt a:hover {
+    color: yellowgreen;
 }
 
 #pic-caption {
@@ -171,7 +177,6 @@ h1 {
     color: var(--blue);
 }
 
-
 @media only screen and (max-width: 768px) {
     .pic {
         height: 35vh;
@@ -182,8 +187,25 @@ h1 {
         flex-direction: column;
     }
 
+    .background-text {
+        height: 75%;
+        overflow: auto;
+    }
+
     h1 {
         font-size: 4rem;
+    }
+
+    .small_txt {
+        font-size: 1rem;
+    }
+
+    .big_txt {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
 
