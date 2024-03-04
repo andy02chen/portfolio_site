@@ -1,21 +1,23 @@
 :root {
-    --text-background: black;
+    --blue: #0d76ee;
 }
 
 html {
     scroll-padding-top: 70px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    background-color: #3f80e8;
+    padding-left: 15px;
+    background-color: var(--blue);
 }
 
 .background-img {
     height: 100vh;
     width: 100vw;
-    position: relative;
+    position: absolute;
     object-fit: cover;
     z-index: 0;
 }
@@ -54,7 +56,36 @@ body {
 }
 
 #navbar a:hover {
-    background-color: #3f80e8;
+    background-color: var(--blue);
+}
+
+#welcome-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+}
+
+#welcome-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
 }
 
 section {
@@ -66,42 +97,94 @@ section:last-of-type{
     height: 200px;
 }
 
+.background-title {
+    z-index: 3;
+    color: white;
+    background-color: black;
+    opacity: 70%;
+    border: 2px solid transparent;
+    transition: transform .2s ease-in-out;
+    padding: 10px;
+}
+
 .background-text {
     z-index: 3;
     color: white;
     background-color: black;
     opacity: 70%;
-    z-index: 2;
     border: 2px solid transparent;
-}
-
-#welcome-msg {
-    top: 10%;
-    left: 5%;
+    transition: transform .2s ease-in-out;
+    padding: 10px;
+    width: 100%;
 }
 
 #intro-text {
-    top: 10%;
-    right: 20%;
-    width: calc(100vw * 5%);
+    width: 79%;
 }
 
-#profile-pic {
-    left: 5%;
-    top: 50%;
+#pfp {
+    padding: 10px;
+    background-color: black;
+    opacity: 100%;
+    z-index: 2;
+    transition: transforms .2s ease-in-out;
+}
+
+.pic {
+    height: 50vh;
+    width: 100%;
+}
+
+#pfp:hover {
+    transform: scale(1.05);
+}
+
+.background-text:hover {
+    transform: scale(1.025);
+}
+
+.background-title:hover {
+    transform: scale(1.025);
 }
 
 h1 {
     font-size: 5rem;
-    position: absolute;
-    
+    position: relative;
 }
 
 .small_txt {
-    font-size: 16px;
+    display: flex;
+    font-size: 1.25rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+}
+
+#pic-caption {
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+.big_txt {
+    margin: 0;
+    font-size: 4rem;
+    color: var(--blue);
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 768px) {
+    .pic {
+        height: 35vh;
+        width: 100%;
+    }
 
+    #welcome-section {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
 }
+
+/* TODO Fix for smaller screens, and problem with left side */
