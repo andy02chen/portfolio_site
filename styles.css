@@ -10,8 +10,8 @@ html {
 
 body {
     margin: 0;
-    padding-left: 15px;
     background-color: var(--blue);
+    overflow: hidden;
 }
 
 .background-img {
@@ -25,9 +25,9 @@ body {
 #navbar {
     position: sticky;
     background: #333;
-    border: 2px solid black;
-    padding: 15px;
-    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
     width: 100%;
     top: 0px;
     height: 35px;
@@ -39,7 +39,7 @@ body {
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
     overflow: hidden;
 }
 
@@ -63,24 +63,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-    padding: auto;
     width: 50%;
     height: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #welcome-right {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+    justify-content: center;
     width: 50%;
     height: 100%;
-    justify-content: center;
+    overflow: auto;
 }
 
 #welcome-section {
+    background-image: url('./files/background.jpg');
+    background-size: cover;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -104,22 +104,23 @@ section:last-of-type{
     opacity: 70%;
     border: 2px solid transparent;
     transition: transform .2s ease-in-out;
-    padding: 10px;
+    padding: auto;
+    transition: opacity 1s ease;
 }
 
 .background-text {
-    z-index: 3;
     color: white;
+    opacity: 0.7;
     background-color: black;
-    opacity: 70%;
-    border: 2px solid transparent;
-    transition: transform .2s ease-in-out;
     padding: 10px;
-    width: 100%;
+    width: 90%;
+    overflow: auto;
 }
 
 #intro-text {
-    width: 79%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
 
 #pfp {
@@ -128,10 +129,11 @@ section:last-of-type{
     opacity: 100%;
     z-index: 2;
     transition: transforms .2s ease-in-out;
+    overflow: auto;
 }
 
 .pic {
-    height: 50vh;
+    height: 60vh;
     width: 100%;
 }
 
@@ -139,25 +141,31 @@ section:last-of-type{
     transform: scale(1.05);
 }
 
-.background-text:hover {
+.background-text:hover, .background-title:hover{
     transform: scale(1.025);
+    opacity: 0.9;
 }
 
-.background-title:hover {
-    transform: scale(1.025);
+.background-text:hover .make-blue{
+    color: var(--blue);
 }
 
 h1 {
-    font-size: 5rem;
-    position: relative;
+    font-size: 4rem;
 }
 
 .small_txt {
-    display: flex;
     font-size: 1.25rem;
     flex-wrap: wrap;
-    width: 100%;
     margin: 0;
+}
+
+.small_txt a {
+    color: var(--blue);
+}
+
+.small_txt a:hover {
+    color: yellowgreen;
 }
 
 #pic-caption {
@@ -171,20 +179,44 @@ h1 {
     color: var(--blue);
 }
 
+.sml-caption {
+    font-size: .75rem;
+}
 
 @media only screen and (max-width: 768px) {
     .pic {
-        height: 35vh;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    #welcome-section {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        background-image: url('./files/background.jpg');
+    }
+
+    #welcome-left {
         width: 100%;
     }
 
-    #welcome-section {
-        flex-direction: column;
+    #welcome-right {
+        width: 100%;
+        height: 100%;
     }
 
-    h1 {
+    #intro-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #welcome-msg, .background-title {
+        max-width: 100%;
+    }
+
+    #welcome-msg{
         font-size: 4rem;
+        word-wrap: break-word;
     }
 }
-
-/* TODO Fix for smaller screens, and problem with left side */
