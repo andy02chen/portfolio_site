@@ -4,12 +4,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset='utf-8'>
     <link rel='stylesheet' href='./styles.css'>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/fontawesome.min.css">
   </head>
   <body>
     <nav id='navbar'>
       <ul>
-		<li><a href="#">Home</a></li>
+		<li><a href="#" class="home">Home</a></li>
         <li><a href='#welcome-section'>Welcome</a></li>
         <li><a href='#projects'>Projects</a></li>
         <li><a href='#contact'>Contact</a></li>
@@ -35,7 +35,6 @@
 			</div>
 			
 			<div id="welcome-right">
-				<!-- <h1 id="intro-text"> -->
 				<div class="background-text">
 					<h1 id="intro-text">
 						<p class="big_txt">
@@ -67,7 +66,6 @@
 						</p>
 					</h1>
 				</div>
-				<!-- </h1> -->
 			</div>
 		</section>
 		<section id='projects'>
@@ -87,12 +85,29 @@
 			</a>
 		</div>
 		</section>
-		<section id='contact'>
-		<h2>Contact</h2>
-		<a href='https://github.com/andy02chen' target='_blank' id='profile-link'>GitHub</a>
-		<a href="#"><i class="fa fa-github"></i></a>
-		<p>Email: andy02chen@gmail.com</p>
-		</section>
+		<footer id='contact'>
+			<div class="footer-title">
+				<h2>Contact</h2>
+			</div>
+			
+			<div class="footer-body">
+				<a href='https://github.com/andy02chen' target='_blank' class='social-icons'>
+					<ion-icon name="logo-github"></ion-icon>
+				</a>
+
+				<a href="https://www.instagram.com/andy.c02/" target="_blank" class="social-icons">
+					<ion-icon name="logo-instagram"></ion-icon>
+				</a>
+
+				<a href="https://www.linkedin.com/in/andy-chen-bab130253/" target="_blank" class="social-icons">
+					<ion-icon name="logo-linkedin"></ion-icon>
+				</a>
+
+				<p><ion-icon name="mail-outline"></ion-icon>: andy02chen@gmail.com</p>
+			</div>
+		</footer>
 	</div>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
