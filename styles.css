@@ -4,14 +4,12 @@
 
 * {
     box-sizing: border-box;
-}
-
-.main {
-    margin-top: 60px;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    scroll-padding-top: 70px;
+    scroll-padding-top: 60px;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -46,7 +44,7 @@ body {
 #navbar ul {
     list-style-type: none;
     font-weight: bold;
-    font-family: Helvetica, sans-serif;
+    font-family: Trebuchet MS, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -55,6 +53,15 @@ body {
 
 #navbar li {
     display: inline-block;
+}
+
+.home {
+    background-color: var(--blue);
+}
+
+#navbar .home:hover {
+    background-color: white;
+    color: var(--blue);
 }
 
 #navbar a {
@@ -101,19 +108,14 @@ section {
     width: 100vw;
 }
 
-section:last-of-type{
-    height: 200px;
-}
-
 .background-title {
     z-index: 3;
     color: white;
     background-color: black;
     opacity: 70%;
     border: 2px solid transparent;
-    transition: transform .2s ease-in-out;
+    transition: transform .2s ease, opacity 1s ease;
     padding: auto;
-    transition: opacity 1s ease;
 }
 
 .background-text {
@@ -123,6 +125,7 @@ section:last-of-type{
     padding: 10px;
     width: 90%;
     overflow: auto;
+    transition: transform .2s ease-in-out;
 }
 
 #intro-text {
@@ -136,15 +139,15 @@ section:last-of-type{
     background-color: black;
     opacity: 100%;
     z-index: 2;
-    transition: transforms .2s ease-in-out;
+    transition: transform 0.2s ease;
     overflow: auto;
-    transition: filter 1s ease all;
 }
 
 .pic {
     height: 60vh;
     width: 100%;
     filter: grayscale(1);
+    transition: filter .75s ease;
 }
 
 #pfp:hover {
@@ -184,7 +187,7 @@ h1 {
 
 #pic-caption {
     color: white;
-    font-family: Roboto, sans-serif;
+    font-family: Verdana, sans-serif;
 }
 
 .big_txt {
@@ -241,10 +244,41 @@ h1 {
 }
 
 /* Contact Section */
-.fa {
+#contact {
+    background-color: #333;
+    bottom: 0px;
     padding: 20px;
-    font-size: 40px;
-    width: 60px;
+}
+
+.footer-title {
+    font-size: 2rem;
+    font-family: Trebuchet MS, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.social-icons:hover {
+    color: var(--blue);
+    transform: scale(1.1);
+    color: var(--blue);
+}
+
+.footer-body {
+    text-align: center;
+}
+
+.footer-body p{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.social-icons {
+    font-size: 4rem;
     text-decoration: none;
-    margin: 5px 80px;
+    color: white;
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
