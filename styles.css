@@ -2,6 +2,14 @@
     --blue: #0d76ee;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    margin-top: 60px;
+}
+
 html {
     scroll-padding-top: 70px;
     overflow-x: hidden;
@@ -23,15 +31,16 @@ body {
 }
 
 #navbar {
-    position: sticky;
+    position: fixed;
     background: #333;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin: 0;
+    padding-top: auto;
     width: 100%;
-    top: 0px;
-    height: 35px;
+    top: 0;
+    height: 60px;
     z-index: 999;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
 }
 
 #navbar ul {
@@ -39,20 +48,19 @@ body {
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     margin: 0;
-    padding-left: 10px;
-    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#navbar li {
+    display: inline-block;
 }
 
 #navbar a {
     text-decoration: none;
     color: white;
-    display: block;
-    text-align: center;
     padding: 10px;
-}
-
-#navbar li {
-    float: left;
 }
 
 #navbar a:hover {
@@ -130,15 +138,21 @@ section:last-of-type{
     z-index: 2;
     transition: transforms .2s ease-in-out;
     overflow: auto;
+    transition: filter 1s ease all;
 }
 
 .pic {
     height: 60vh;
     width: 100%;
+    filter: grayscale(1);
 }
 
 #pfp:hover {
     transform: scale(1.05);
+}
+
+#pfp:hover .pic {
+    filter: grayscale(0);
 }
 
 .background-text:hover, .background-title:hover{
@@ -183,10 +197,15 @@ h1 {
     font-size: .75rem;
 }
 
+#welcome-msg {
+    font-size: 5rem;
+}
+
 @media only screen and (max-width: 768px) {
     .pic {
         height: auto;
         max-width: 100%;
+        filter: grayscale(0);
     }
     
     #welcome-section {
@@ -218,5 +237,14 @@ h1 {
     #welcome-msg{
         font-size: 4rem;
         word-wrap: break-word;
-    }
+    }    
+}
+
+/* Contact Section */
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 60px;
+    text-decoration: none;
+    margin: 5px 80px;
 }
