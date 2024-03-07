@@ -55,10 +55,6 @@ body {
     display: inline-block;
 }
 
-.home {
-    background-color: var(--blue);
-}
-
 #navbar .home:hover {
     background-color: white;
     color: var(--blue);
@@ -202,14 +198,15 @@ h1 {
 }
 
 #welcome-msg {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .strikethrough {
     text-decoration: line-through;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px),
+only screen and (max-height: 768px){
     #pfp {
         display: flex;
         flex-direction: column;
@@ -267,8 +264,9 @@ h1 {
 /* Contact Section */
 #contact {
     background-color: #333;
-    bottom: 0px;
+    bottom: 0;
     padding: 20px;
+    width: 100%;
 }
 
 .footer-title {
@@ -286,17 +284,37 @@ h1 {
 }
 
 .footer-body {
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer-body p{
+.get-mail{
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     color:white;
     transition: color .2s ease, transform .2s ease;
 }
 
-.footer-body p:hover {
+.alert {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0;
+    position: absolute;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.footer-body .get-mail:hover {
     color: var(--blue);
     transform: scale(1.1);
 }
@@ -342,7 +360,8 @@ h1 {
     align-items: center;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 425px),
+screen and (max-height: 768px) {
     .projects-list {
         grid-template-columns: 1fr;
     }
@@ -357,6 +376,15 @@ h1 {
     background-color: wheat;
     width: 90%;
     height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-img {
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .black_background {

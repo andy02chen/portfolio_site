@@ -4,12 +4,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset='utf-8'>
     <link rel='stylesheet' href='./styles.css'>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/fontawesome.min.css">
   </head>
   <body>
     <nav id='navbar'>
       <ul>
-		<li><a href="#" class="home">Home</a></li>
+		<li><a href="index.html" class="home">Home</a></li>
         <li><a href='#welcome-section'>Welcome</a></li>
         <li><a href='#projects'>Projects</a></li>
         <li><a href='#contact'>Contact</a></li>
@@ -72,14 +71,22 @@
 			<div class="projects-div">
 				<h2 class="big_txt black_background">Here are some of my projects:</h2>
 				<div class='projects-list'>
-					<div class="project-tile">
-					</div>
-					<div class="project-tile">
-					</div>
-					<div class="project-tile">
-					</div>
-					<div class="project-tile">
-					</div>
+					<a href="proj_1.html" class="project-tile">
+						<img class="project-img" src="./files/thinking.png" alt="Thinking img">
+					</a>
+
+					<a href="#" class="project-tile">
+						<img class="project-img" src="./files/thinking.png" alt="Thinking img">
+					</a>
+
+					<a href="#" class="project-tile">
+						<img class="project-img" src="./files/thinking.png" alt="Thinking img">
+					</a>
+
+					<a href="#" class="project-tile">
+						<img class="project-img" src="./files/thinking.png" alt="Thinking img">
+					</a>
+
 					<!-- <a class='project-tile' href='https://github.com/andy02chen/ISYS2160_AS2'>
 					<p >Project 1 - eCommerce Site (Semester 2 2023)</p>
 					</a>
@@ -102,23 +109,27 @@
 			</div>
 			
 			<div class="footer-body">
-				<a href='https://github.com/andy02chen' target='_blank' class='social-icons'>
-					<ion-icon name="logo-github"></ion-icon>
-				</a>
+				<div>
+					<a href='https://github.com/andy02chen' target='_blank' class='social-icons'>
+						<ion-icon name="logo-github"></ion-icon>
+					</a>
 
-				<a href="https://www.instagram.com/andy.c02/" target="_blank" class="social-icons">
-					<ion-icon name="logo-instagram"></ion-icon>
-				</a>
+					<a href="https://www.instagram.com/andy.c02/" target="_blank" class="social-icons">
+						<ion-icon name="logo-instagram"></ion-icon>
+					</a>
 
-				<a href="https://www.linkedin.com/in/andy-chen-bab130253/" target="_blank" class="social-icons">
-					<ion-icon name="logo-linkedin"></ion-icon>
-				</a>
-
-				<p><ion-icon name="mail-outline"></ion-icon>: andy02chen@gmail.com</p>
+					<a href="https://www.linkedin.com/in/andy-chen-bab130253/" target="_blank" class="social-icons">
+						<ion-icon name="logo-linkedin"></ion-icon>
+					</a>
+				</div>
+				
+				<p id="emailAlert" class="alert">Copied to ClipBoard</p>
+				<p class="get-mail" onclick="copyEmail()"><ion-icon name="mail-outline"></ion-icon>: andy02chen@gmail.com</p>
 			</div>
 		</footer>
 	</div>
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="script.js"></script>
     </body>
 </html>
