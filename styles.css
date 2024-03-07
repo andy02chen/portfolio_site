@@ -14,6 +14,10 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    margin-top: 60px;
+}
+
 body {
     margin: 0;
     background-color: var(--blue);
@@ -205,9 +209,16 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+    #pfp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
     .pic {
         height: auto;
-        max-width: 100%;
+        max-width: 75%;
         filter: grayscale(0);
     }
     
@@ -219,6 +230,7 @@ h1 {
     }
 
     #welcome-left {
+        display: flex;
         width: 100%;
     }
 
@@ -233,6 +245,10 @@ h1 {
         justify-content: center;
     }
 
+    .background-text, .background-title {
+        opacity: 0.9;
+    }
+
     #welcome-msg, .background-title {
         max-width: 100%;
     }
@@ -240,7 +256,11 @@ h1 {
     #welcome-msg{
         font-size: 4rem;
         word-wrap: break-word;
-    }    
+    }
+
+    .make-blue{
+        color: var(--blue);
+    }
 }
 
 /* Contact Section */
@@ -271,7 +291,13 @@ h1 {
 .footer-body p{
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    
+    color:white;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.footer-body p:hover {
+    color: var(--blue);
+    transform: scale(1.1);
 }
 
 .social-icons {
@@ -282,3 +308,26 @@ h1 {
     margin: 0 10px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
+
+/* Project Part */
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-tile {
+    border: 2px solid white;
+    background-color: wheat;
+    width: 100px;
+    height: 100px;
+}
+
+/* TODO HEIGHT PROBLEM */
