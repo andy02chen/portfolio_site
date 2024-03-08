@@ -14,22 +14,10 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
-    margin-top: 60px;
-}
-
 body {
     margin: 0;
     background-color: var(--blue);
     overflow: hidden;
-}
-
-.background-img {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    object-fit: cover;
-    z-index: 0;
 }
 
 #navbar {
@@ -57,10 +45,6 @@ body {
 
 #navbar li {
     display: inline-block;
-}
-
-.home {
-    background-color: var(--blue);
 }
 
 #navbar .home:hover {
@@ -105,6 +89,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
+    margin-top: 60px;
 }
 
 section {
@@ -205,7 +190,11 @@ h1 {
 }
 
 #welcome-msg {
-    font-size: 5rem;
+    font-size: 4rem;
+}
+
+.strikethrough {
+    text-decoration: line-through;
 }
 
 @media only screen and (max-width: 768px) {
@@ -266,8 +255,9 @@ h1 {
 /* Contact Section */
 #contact {
     background-color: #333;
-    bottom: 0px;
+    bottom: 0;
     padding: 20px;
+    width: 100%;
 }
 
 .footer-title {
@@ -285,17 +275,36 @@ h1 {
 }
 
 .footer-body {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer-body p{
+.get-mail{
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     color:white;
     transition: color .2s ease, transform .2s ease;
 }
 
-.footer-body p:hover {
+.alert {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0;
+    position: absolute;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.footer-body .get-mail:hover {
     color: var(--blue);
     transform: scale(1.1);
 }
@@ -313,21 +322,87 @@ h1 {
 #projects {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 25px;
+    background-color: beige;
+}
+
+.projects-div {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    background-color: var(--blue);
 }
 
 .projects-list {
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    
+    overflow-y: auto;
+    justify-items: center;
 }
 
 .project-tile {
     border: 2px solid white;
     background-color: wheat;
-    width: 100px;
-    height: 100px;
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
 }
 
-/* TODO HEIGHT PROBLEM */
+.project-tile-hover {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.proj-thinking {
+    background-image: url("files/thinking.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.project-desc {
+    padding: .75rem;
+}
+
+.project-title {
+    font-size: clamp(1rem, 15vw, 2.5rem);
+}
+
+.black_background {
+    background-color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: clamp(1rem, 10vw, 2.5rem);
+}
+
+.bar {
+    border-bottom: 5px solid blue;
+    width: 100%;
+    padding: .2rem 0 .2rem 0;
+}
+
+/* TODO
+- Add opacity
+- Add animation for hover
+- change button to look better
+- chagne desc font
+*/
