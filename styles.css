@@ -197,61 +197,6 @@ h1 {
     text-decoration: line-through;
 }
 
-@media only screen and (max-width: 768px) {
-    #pfp {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 10px;
-    }
-
-    .pic {
-        height: auto;
-        max-width: 75%;
-        filter: grayscale(0);
-    }
-    
-    #welcome-section {
-        display: flex;
-        height: auto;
-        flex-direction: column;
-        background-image: url('./files/background.jpg');
-    }
-
-    #welcome-left {
-        display: flex;
-        width: 100%;
-    }
-
-    #welcome-right {
-        width: 100%;
-        height: 100%;
-    }
-
-    #intro-text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .background-text, .background-title {
-        opacity: 0.9;
-    }
-
-    #welcome-msg, .background-title {
-        max-width: 100%;
-    }
-
-    #welcome-msg{
-        font-size: 4rem;
-        word-wrap: break-word;
-    }
-
-    .make-blue{
-        color: var(--blue);
-    }
-}
-
 /* Contact Section */
 #contact {
     background-color: #333;
@@ -364,9 +309,8 @@ h1 {
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    text-align: center;
+    padding: 10px 0 10px 0;
 }
 
 .proj-thinking {
@@ -376,12 +320,33 @@ h1 {
     background-position: center;
 }
 
+.project-tile:hover .project-tile-hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.project-tile:hover .bar,
+.project-tile:hover .project-desc,
+.project-tile:hover .project-button{
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .project-desc {
     padding: .75rem;
+    font-family: Arial, sans-serif;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 .project-title {
     font-size: clamp(1rem, 15vw, 2.5rem);
+    font-family: DejaVu Sans Mono, monospace;
+    color: var(--blue);
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .black_background {
@@ -398,11 +363,111 @@ h1 {
     border-bottom: 5px solid blue;
     width: 100%;
     padding: .2rem 0 .2rem 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-button {
+    font-family: Impact, fantasy;
+    font-size: 1.5rem;
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-button a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #pfp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .pic {
+        height: auto;
+        max-width: 75%;
+        filter: grayscale(0);
+    }
+    
+    #welcome-section {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        background-image: url('./files/background.jpg');
+    }
+
+    #welcome-left {
+        display: flex;
+        width: 100%;
+    }
+
+    #welcome-right {
+        width: 100%;
+        height: 100%;
+    }
+
+    #intro-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .background-text, .background-title {
+        opacity: 0.9;
+    }
+
+    #welcome-msg, .background-title {
+        max-width: 100%;
+    }
+
+    #welcome-msg{
+        font-size: 4rem;
+        word-wrap: break-word;
+    }
+
+    .make-blue{
+        color: var(--blue);
+    }
+}
+
+@media (hover: none) {
+    .project-tile-hover{
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .bar,
+    .project-desc,
+    .project-button{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .pic {
+        height: auto;
+        max-width: 75%;
+        filter: grayscale(0);
+    }
+
+    #pfp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .make-blue{
+        color: var(--blue);
+    }
+
+    .background-text, .background-title {
+        opacity: 0.9;
+    }
 }
 
 /* TODO
-- Add opacity
-- Add animation for hover
-- change button to look better
-- chagne desc font
+- maybe change the hover stuff for projects
 */
