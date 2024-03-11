@@ -264,6 +264,20 @@ h1 {
 }
 
 /* Project Part */
+.proj-thinking {
+    background-image: url("files/thinking.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.proj-1 {
+    background-image: url("files/proj_1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #projects {
     display: flex;
     flex-direction: column;
@@ -313,13 +327,6 @@ h1 {
     padding: 10px 0 10px 0;
 }
 
-.proj-thinking {
-    background-image: url("files/thinking.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .project-tile:hover .project-tile-hover{
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -344,7 +351,7 @@ h1 {
     font-size: clamp(1rem, 15vw, 2.5rem);
     font-family: DejaVu Sans Mono, monospace;
     color: var(--blue);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
     padding: 10px;
 }
@@ -373,10 +380,19 @@ h1 {
     padding: 10px;
     opacity: 0;
     pointer-events: none;
+
 }
 
 .project-button a {
     text-decoration: none;
+}
+
+.button-design {
+    color: var(--blue);
+}
+
+.project-button:hover {
+    box-shadow: 0px 0px 10px 5px var(--blue);
 }
 
 @media only screen and (max-width: 768px) {
@@ -435,6 +451,14 @@ h1 {
 }
 
 @media (hover: none) {
+    .project-button {
+        box-shadow: 0px 0px 10px 5px var(--blue);
+    }
+
+    .button-design {
+        color: var(--blue);
+    }
+
     .project-tile-hover{
         background-color: rgba(0, 0, 0, 0.8);
     }
@@ -468,6 +492,20 @@ h1 {
     }
 }
 
-/* TODO
-- maybe change the hover stuff for projects
-*/
+/* Projects Main */
+.proj-main {
+    height: 1000px; /* TODO change to auto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    background-image: url('./files/background.jpg');
+    background-size: cover;
+}
+
+.proj-main-body {
+    width: 90%;
+    height: 90%;
+    background-color: wheat;
+    padding: 15px;
+}
