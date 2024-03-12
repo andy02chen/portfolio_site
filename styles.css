@@ -494,18 +494,53 @@ h1 {
 
 /* Projects Main */
 .proj-main {
-    height: 1000px; /* TODO change to auto */
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
     background-image: url('./files/background.jpg');
     background-size: cover;
+    padding: 2vh;
 }
 
 .proj-main-body {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background-color: wheat;
     padding: 15px;
+}
+
+.proj-img {
+    height: auto;
+    max-width: 50%;
+    border: 5px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proj-main-desc {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.25rem;
+}
+
+.proj-main-title {
+    text-align: center;
+    font-size: 3rem;
+    word-wrap: break-word;
+}
+
+.to-repo {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.repo-link {
+    color: var(--blue);
+}
+
+.repo-link:hover {
+    color: purple;
 }
