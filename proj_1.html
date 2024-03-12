@@ -17,7 +17,8 @@
 
     <section class="proj-main">
       <div class="proj-main-body">
-        <p>
+        <h1 class="proj-main-title"> eCommerce Site </h1>
+        <p class="proj-main-desc">
           This project was developed in a group of 3. The site is basic as we were not experience with web development.          
           It was written in Python using the Flask framework and SQLite was used for the database. 
           This site has a homepage and cart features which allow the user to store items and checkout. There is a user role, for purchasing items, and admin role 
@@ -35,33 +36,48 @@
           Images of the site:
           <br>
           <br>
-          The homepage is implemented by querying the DB and getting all the products. Then using a loop to display them.
-          <!-- TODO add an image -->
+          The homepage is implemented by querying the DB and getting all the products. Then it displays using a loop to display them.
+          <br>
+          <br>
+          <img class='proj-img' src="files/proj_1_1.png" alt="Image of HomePage">
           <br>
           <br>
           The cart feature is implemented by using URL parameters to redirect and edit a dictionary. 
           In the cart you are able to select quantity from a drop menu or remove the item entirely from the cart.
-          <!-- TODO add an image -->
+          Uses a for loop to get items and display them.
           <br>
           <br>
-          The add projects page enables the admin add new items. 
-          <!-- TODO add an image -->
+          <img class='proj-img'  src="files/proj_1_cart.png" alt="Image of Cart Feature">
+          <br>
+          <br>
+          The add projects page enables the admin add new items, by reading the inputs and adding to DB.
+          <br>
+          <br>
+          <img class='proj-img'  src="files/proj_1_add_prod.png" alt="Image of admin add feature">
           <br>
           <br>
           The admin can also edit products by selecting the id from a dropdown menu. It displays the Old (current) details and allows the admin to change them.
-          <!-- TODO add an image -->
+          Gets inputs and edits DB.
           <br>
           <br>
-          Deleting items can be done by selecting the item id.
-          <!-- TODO add an image -->
+          <img class='proj-img'  src="files/proj_1_edit.png" alt="Image of admin edit feature">
           <br>
           <br>
-          The admin can edit the order status.
-          <!-- TODO add an image -->
+          Deleting items can be done by selecting the item id. Gets inputs and removes row from product table.
+          <br>
+          <br>
+          <img class='proj-img'  src="files/proj_1_del.png" alt="Image of admin delete feature">
+          <br>
+          <br>
+          The admin can edit the order status. (The Assigment specs were unclear about how much the admin should be able to modify).
+          Gets row with id selected and removes from DB.
+          <br>
+          <br>
+          <img class='proj-img' src="files/proj_1_manage.png" alt="Image of admin manage order feature">
           <br>
           <br>
 
-          Link <a href="https://github.com/andy02chen/ISYS2160_AS2" target="_blank">To Repo</a>
+          <span class='to-repo'><a class="repo-link" href="https://github.com/andy02chen/ISYS2160_AS2" target="_blank">Go To Code</a></span>
         </p>
       </div>
     </section>
@@ -89,6 +105,12 @@
             <p class="get-mail" onclick="copyEmail()"><ion-icon name="mail-outline"></ion-icon>: andy02chen@gmail.com</p>
         </div>
     </footer>
+
+    <div id="imgModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="proj-example-img">
+    </div>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
