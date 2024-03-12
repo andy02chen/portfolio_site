@@ -231,6 +231,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     color:white;
     transition: color .2s ease, transform .2s ease;
+    cursor: pointer;
 }
 
 .alert {
@@ -448,6 +449,10 @@ h1 {
     .make-blue{
         color: var(--blue);
     }
+
+    .modal-content {
+        max-width: 95%;
+    }
 }
 
 @media (hover: none) {
@@ -501,7 +506,8 @@ h1 {
     margin-top: 60px;
     background-image: url('./files/background.jpg');
     background-size: cover;
-    padding: 2vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .proj-main-body {
@@ -518,6 +524,11 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.proj-img:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .proj-main-desc {
@@ -544,3 +555,38 @@ h1 {
 .repo-link:hover {
     color: purple;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    overflow: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 3rem;
+}
+
+.close:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* TODO Make enlarge feature for smaller screens */

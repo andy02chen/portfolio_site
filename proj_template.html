@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='./styles.css'>
+  </head>
+  <body>
+    <nav id='navbar'>
+        <ul>
+          <li><a href="index.html" class="home">Home</a></li>
+          <li><a href='index.html#welcome-section'>Welcome</a></li>
+          <li><a href='index.html#projects'>Projects</a></li>
+          <li><a href='#contact'>Contact</a></li>
+        </ul>
+      </nav>
+
+    <section class="proj-main">
+      <div class="proj-main-body">
+        <h1 class="proj-main-title">INSERT TITLE</h1>
+        <p class="proj-main-desc">
+          <span class='to-repo'><a class="repo-link" href="#" target="_blank">Go To Code</a></span>
+        </p>
+      </div>
+    </section>
+    <footer id='contact'>
+        <div class="footer-title">
+            <h2>Contact</h2>
+        </div>
+        
+        <div class="footer-body">
+            <div>
+                <a href='https://github.com/andy02chen' target='_blank' class='social-icons'>
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+
+                <a href="https://www.instagram.com/andy.c02/" target="_blank" class="social-icons">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+
+                <a href="https://www.linkedin.com/in/andy-chen-bab130253/" target="_blank" class="social-icons">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+            
+            <p id="emailAlert" class="alert">Copied to ClipBoard</p>
+            <p class="get-mail" onclick="copyEmail()"><ion-icon name="mail-outline"></ion-icon>: andy02chen@gmail.com</p>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
