@@ -279,6 +279,13 @@ h1 {
     background-position: center;
 }
 
+.proj-2 {
+    background-image: url("files/proj_2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #projects {
     display: flex;
     flex-direction: column;
@@ -588,5 +595,3 @@ h1 {
     cursor: pointer;
     text-decoration: none;
 }
-
-/* TODO Make enlarge feature for smaller screens */

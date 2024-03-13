@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='./styles.css'>
+  </head>
+  <body>
+    <nav id='navbar'>
+        <ul>
+          <li><a href="index.html" class="home">Home</a></li>
+          <li><a href='index.html#welcome-section'>Welcome</a></li>
+          <li><a href='index.html#projects'>Projects</a></li>
+          <li><a href='#contact'>Contact</a></li>
+        </ul>
+      </nav>
+
+    <section class="proj-main">
+      <div class="proj-main-body">
+        <h1 class="proj-main-title">BomberMan</h1>
+        <p class="proj-main-desc">
+            This project was an assignment for INFO1113, which was developed individually. 
+            I had taken this unit in my second semester of 2021, as a result I may not remember most of 
+            my design choices but I will still try my best to explain my thoughts.
+            Although it's an old project, I'm still deciding to display it 
+            as I am proud of this assignment. I believe I scored around 95% only losing marks for testing.
+            <br>
+            <br>
+            The goal of the game is to reach the goal tile of each level without running out of time or lives.
+            <img class='proj-img' src="files/proj_2.png" alt="Image of Game">
+            <br>
+            <br>
+            The app first reads the input, which are text files for the map.
+            <br>
+            P = Player
+            <br>
+            G = Goal
+            <br>
+            R = Red Enemy (different behaviour than the yellow)
+            <br>
+            Y = Yellow Enemy
+            <br>
+            W = wall
+            <br>
+            <br>
+            <img class='proj-img' src="files/proj_2_maptext.png" alt="Image of level in text">
+            <img class='proj-img' src="files/proj_2_map.png" alt="Image of level">
+            <br>
+            <br>
+            The user is able to modify the number of lives, time and levels.
+            <br>
+            <br>
+            <img class='proj-img' src="files/proj_2_config.png" alt="Image of config">
+            <br>
+            <br>
+            The player is able move and drop bombs, which can kill and break. 
+            The shape and size of the explosion also change depending on where they are dropped.
+            <br>
+            <br>
+            <img class='proj-img' src="files/proj_2_boom1.png" alt="Image of Explosion in a plus shape">
+            <img class='proj-img' src="files/proj_2_boom2.png" alt="Image of Explosion in a plus shape with top shorter">
+            <img class='proj-img' src="files/proj_2_boom3.png" alt="Image of Explosion in a line as top and bottom are blocked">
+            <br>
+            <br>
+            The map is stored in an ArrayList due to levels having different sizes. 
+            I made an abstract class called GameObject which holds variables like coordinates, width and height. 
+            Everything extends from GameObject class as they all require positioning and everything being displayed has width and height.
+            Tiles and People (characters) also have abstract classes. Tiles all share similar properties such as being breakable, empty or finish tile and 
+            people have properties such as movement and direction (for animation).
+            <br>
+            <br>
+          <span class='to-repo'><a class="repo-link" href="https://github.com/andy02chen/bomberman" target="_blank">Go To Code</a></span>
+        </p>
+      </div>
+    </section>
+    <footer id='contact'>
+        <div class="footer-title">
+            <h2>Contact</h2>
+        </div>
+        
+        <div class="footer-body">
+            <div>
+                <a href='https://github.com/andy02chen' target='_blank' class='social-icons'>
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+
+                <a href="https://www.instagram.com/andy.c02/" target="_blank" class="social-icons">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+
+                <a href="https://www.linkedin.com/in/andy-chen-bab130253/" target="_blank" class="social-icons">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+            
+            <p id="emailAlert" class="alert">Copied to ClipBoard</p>
+            <p class="get-mail" onclick="copyEmail()"><ion-icon name="mail-outline"></ion-icon>: andy02chen@gmail.com</p>
+        </div>
+    </footer>
+
+    <div id="imgModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="proj-example-img">
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
