@@ -602,3 +602,7 @@ h1 {
     cursor: pointer;
     text-decoration: none;
 }
+
+.image-caption {
+    text-align: center;
+}
