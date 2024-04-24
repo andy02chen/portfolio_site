@@ -555,6 +555,8 @@ h1 {
 .proj-main-desc {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.25rem;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 
 .proj-main-title {
@@ -612,4 +614,14 @@ h1 {
 
 .image-caption {
     text-align: center;
+}
+
+.demo-vid {
+    text-align: center;
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+video {
+    width: 75vw;
 }
