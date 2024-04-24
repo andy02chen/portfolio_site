@@ -9,14 +9,96 @@
     <nav id='navbar'>
         <ul>
           <li><a href="index.html" class="home">Home</a></li>
-          <li><a href='#welcome-section'>Welcome</a></li>
-          <li><a href='#projects'>Projects</a></li>
+          <li><a href='index.html#welcome-section'>Welcome</a></li>
+          <li><a href='index.html#projects'>Projects</a></li>
           <li><a href='#contact'>Contact</a></li>
         </ul>
       </nav>
 
-    <div class="main">
-    </div>
+    <section class="proj-main">
+      <div class="proj-main-body">
+        <h1 class="proj-main-title"> eCommerce Site </h1>
+        <p class="proj-main-desc">
+          This project was developed in a group of 3 for an ISYS2160 assignment. The site is basic as we were not experience with web development.          
+          It was written in Python using the Flask framework and SQLite was used for the database. 
+          This site has a homepage and cart features which allow the user to store items and checkout. There is a user role, for purchasing items, and admin role 
+          for managing items and orders. The admin is able to add products, edit products, delete products and manage orders.
+          I was responsible for setting up the backend, developing the login/register pages, admin pages and helping with other parts of the site such as the home page and cart.
+          <br>
+          <br>
+          For the backend, Flask was chosen because it is a simple framework that the group has used in a previous unit. 
+          SQLite was chosen for the database because it is also easy to use. Rather than needing a server, the data is stored in RAM, so setting up was very simple.
+          The database has 3 tables, one for user, orders and products. Users have a unique id and the orders table has a foreign key which points to it.
+          This it to link the order to the user. The order table could've been improved as the items are just stored as a string.
+          I made this choice to make displaying the order easier, it could be improved by having a separate column for quantity and a foreign key pointing to the product_id.
+          <br>
+          <br>
+          Images of the site:
+          <br>
+          <br>
+          <div class="image-caption proj">
+            <p class="proj-main-desc">
+              The homepage is implemented by querying the DB and getting all the products. Then it displays using a loop to display them.
+              <br>
+              <img class='proj-img' src="files/proj_1_1.png" alt="Image of HomePage">
+            </p>
+          </div>
+          <br>
+          <br>
+          <div class="image-caption proj">
+            <p class="proj-main-desc">
+              The cart feature is implemented by using URL parameters to redirect and edit a dictionary. 
+              In the cart you are able to select quantity from a drop menu or remove the item entirely from the cart.
+              Uses a for loop to get items and display them.
+              <br>
+              <img class='proj-img'  src="files/proj_1_cart.png" alt="Image of Cart Feature">
+            </p>
+          </div>
+          <br>
+          <br>
+          <div class="image-caption proj">
+            <p class="proj-main-desc">
+              The add projects page enables the admin add new items, by reading the inputs and adding to DB.
+              <br>
+              <img class='proj-img'  src="files/proj_1_add_prod.png" alt="Image of admin add feature">
+            </p>
+          </div>
+          <br>
+          <br>
+          <div class="image-caption proj">
+            <p class="proj-main-desc">
+              The admin can also edit products by selecting the id from a dropdown menu. It displays the Old (current) details and allows the admin to change them.
+              Gets inputs and edits DB.
+              <br>
+              <img class='proj-img'  src="files/proj_1_edit.png" alt="Image of admin edit feature">
+            </p>  
+          </div>
+          <br>
+          <br>
+          <div class="image-caption proj">
+            <p class="proj-main-desc">
+              Deleting items can be done by selecting the item id. Gets inputs and removes row from product table.
+              <br>
+              <img class='proj-img'  src="files/proj_1_del.png" alt="Image of admin delete feature">
+            </p>  
+          </div>
+          <br>
+          <br>
+          <div class="image-caption proj">
+            <p class="proj-main-desc">
+              The admin can edit the order status. (The Assigment specs were unclear about how much the admin should be able to modify).
+              Gets row with id selected and removes from DB.
+              <br>
+              <img class='proj-img' src="files/proj_1_manage.png" alt="Image of admin manage order feature">
+            </p>  
+          </div>
+          <br>
+          <br>
+
+          <span class='to-repo'><a class="repo-link" href="https://github.com/andy02chen/ISYS2160_AS2" target="_blank">Go To Code</a></span>
+        </p>
+      </div>
+    </section>
     <footer id='contact'>
         <div class="footer-title">
             <h2>Contact</h2>
@@ -41,6 +123,12 @@
             <p class="get-mail" onclick="copyEmail()"><ion-icon name="mail-outline"></ion-icon>: andy02chen@gmail.com</p>
         </div>
     </footer>
+
+    <div id="imgModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="proj-example-img">
+    </div>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
