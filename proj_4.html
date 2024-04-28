@@ -15,7 +15,7 @@
         </ul>
       </nav>
 
-    <section class="proj-main">
+    <section id="proj-main" class="proj-main">
       <div class="proj-main-body">
         <h1 class="proj-main-title">Spotify Player</h1>
         <p class="proj-main-desc">
@@ -92,23 +92,26 @@
             at that index and add the next to the queue.
             <br><br>
             This approach worked, when the current song finished the next in queue would play, the window would slide and add the next one in queue.
-            The only issue with this approach was that changing playlist would cause the existing song to remain in the queue. 
+            The only issue with this approach was with changing playlists. It would cause the existing song to remain in the queue.
             <br>
+            This meant that after changing the playlist, a song from the previously selected playlist would still play. 
             There was also no way to clear the queue as there is not endpoint available. 
             So I also saw an opportunity to optimize the shuffle function and fix this issue at the same time. 
             <br><br>
-            Fisher-Yates works but having a shuffled and non-shuffled section in the array. Each iteration it would randomly pick one 
+            The Fisher-Yates algorithm works by having a shuffled and non-shuffled section in the array. In each iteration it would randomly pick one 
             unshuffled element and place it in the shuffled part. This will repeat until the array is completely shuffled.              
             Since I have over 1000 songs in my main playlist, most of these songs won't be played before I change the playlist or restart
             the shuffle. So rather than shuffling the entire playlist, I would randomly pick one song from the non-shuffled part of the array,
-            move it to the shuffled section and add it onto the queue when the song was nearing completion. 
+            move it to the shuffled section and add it onto the queue when the song was nearing completion. The previous song button was implemented using 
+            a similar approach, but adding the previous song into the queue. 
+            
           </p>
           <br><br>
           <p class="proj-main-desc">
             At the time of writing this (24/4/24) the web app is mostly completed, with a couple of bugs present that I might get around to fixing.
             Nothing that completely break the program though. 
             <br>
-            Below is a demo and the code if you wish to view or test 
+            Below is a demo. A link to the code is available at the <a href='#to-repo'>bottom of the page</a>, if you wish to view or test 
             (idk how the Spotify authentication will work as I never signed out of Spotify)(I am the only end user).
           </p>
           <br><br>
@@ -121,7 +124,21 @@
           </div>
 
           <br><br>
-          <span class='to-repo'><a class="repo-link" href="https://github.com/andy02chen/spotify_player" target="_blank">Go To Code</a></span>
+          <p class="proj-main-desc">
+            Changelogs:<br>
+            - Added user feedback for next and previous song buttons
+          </p>
+          <br><br>
+
+          <div class="demo-vid">
+            <video controls>
+              <source src="files/proj_4_userfeedback.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <br><br>
+          <span id="to-repo" class='to-repo'><a class="repo-link" href="https://github.com/andy02chen/spotify_player" target="_blank">Go To Code</a></span>
       </div>
     </section>
     <footer id='contact'>
