@@ -302,7 +302,6 @@ h1 {
 
 #projects {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 25px;
@@ -314,33 +313,30 @@ h1 {
     height: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: 2px solid black;
     background-color: var(--blue);
 }
 
 .projects-list {
-    width: 100%;
+    display: flex;
     height: 100%;
-    margin: 20px;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    
-    overflow-y: auto;
-    justify-items: center;
+    width: 100%;
+    overflow-x: auto;
 }
 
 .project-tile {
+    flex: 0 0 auto;
     border: 2px solid white;
     background-color: wheat;
-    width: 90%;
+    width: 25%;
+    margin: 10px;
     height: auto;
     display: flex;
     align-items: center;
 }
 
 .project-tile-hover {
+    text-align: center;
     width: 100%;
     height: auto;
     display: flex;
@@ -370,7 +366,7 @@ h1 {
 }
 
 .project-title {
-    font-size: clamp(1rem, 15vw, 2.5rem);
+    font-size: 2.5rem;
     font-family: DejaVu Sans Mono, monospace;
     color: var(--blue);
     background-color: rgba(0, 0, 0, 0.8);
@@ -473,6 +469,20 @@ h1 {
 
     .modal-content {
         max-width: 95%;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .project-tile {
+        width: 47%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .project-tile {
+        width: 94%;
     }
 }
 
