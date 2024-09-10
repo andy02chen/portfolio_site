@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='./styles.css'>
+  </head>
+  <body>
+    <nav id='navbar'>
+        <ul>
+          <li><a href="index.html" class="home">Home</a></li>
+          <li><a href='index.html#welcome-section'>Welcome</a></li>
+          <li><a href='index.html#projects'>Projects</a></li>
+          <li><a href='#contact'>Contact</a></li>
+        </ul>
+      </nav>
+
+    <section class="proj-main">
+      <div class="proj-main-body">
+        <h1 class="proj-main-title">Anime Calendar</h1>
+        <p class="proj-main-desc">
+          <span class='to-repo'><a class="repo-link" href="#" target="_blank">Go To Code</a></span>
+          <span class='to-repo'><a class="repo-link" href="https://ssat4f.com/" target="_blank">Visit Site</a></span>
+          I designed this site to improve the experience of tracking upcoming anime and episode releases.
+          The streaming platform that I currently use to watch my anime is CrunchyRoll and I use MyAnimeList to track and manage by anime progress.
+          CrunchyRoll provides countdown for anime releases, but only for the ones that they believe to be the next big hit, for example, Kaiju No.8. 
+          MyAnimeList used to notify me when anime episodes release but they have stopped. I believe the reason is because the forum sections, 
+          which used to notify me for releases is run by the community, is prone to trolling.
+          <br/>
+          So I combined both features and made my own site. 
+          <br/><br/>
+          <div class="image-caption proj">
+            <p class="proj-main-desc">
+              Home screen
+              <img class='proj-img' src="files/proj_5_home.png" alt="Image of Home Screen">
+            </p>
+          </div>
+          <br/><br/>
+        </p>
+        <p class="proj-main-desc">
+          Things that I have learnt during development:
+          <br/>- How to create API endpoints and use them
+          <br/>- OAuth and how to securely store and exchange tokens
+          <br/>- Attempting to design UI without making the screen feel cluttered
+          <br/>- Colouring and how to emphasise certain UI elements like buttons
+          <br/>- How to use React
+          <br/>- Cloud Computing and running web servers
+          <br/>- Linux and Virtual Machines
+        </p>
+
+        </p>
+      </div>
+    </section>
+    <footer id='contact'>
+        <div class="footer-title">
+            <h2>Contact</h2>
+        </div>
+        
+        <div class="footer-body">
+            <div>
+                <a href='https://github.com/andy02chen' target='_blank' class='social-icons'>
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+
+                <a href="https://www.instagram.com/andy.c02/" target="_blank" class="social-icons">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+
+                <a href="https://www.linkedin.com/in/andy-chen-bab130253/" target="_blank" class="social-icons">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+            
+            <p id="emailAlert" class="alert">Copied to ClipBoard</p>
+            <p class="get-mail" onclick="copyEmail()"><ion-icon name="mail-outline"></ion-icon>: andy02chen@gmail.com</p>
+        </div>
+    </footer>
+
+    <div id="imgModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="proj-example-img">
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

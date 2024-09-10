@@ -272,6 +272,13 @@ h1 {
     background-position: center;
 }
 
+.proj-5 {
+    background-image: url("files/proj_5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .proj-1 {
     background-image: url("files/proj_1.png");
     background-size: cover;
