@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.text-yellow-200 {
+  color: #ffff33;
+}
+
+.group-hover\:fill-yellow-200 {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      fill: #ffff33;
+    }
+  }
+}
