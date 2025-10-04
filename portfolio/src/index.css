@@ -5,6 +5,7 @@
   --dark-blue: #1F2937;
   --white: #FFFFFF;
   --yellow: #FFD700;
+  --light-yellow: #FFFF33;
 }
 
 html, body {
@@ -25,7 +26,7 @@ html, body {
   bottom: 0;
   height: 2px; /* underline thickness */
   width: 0;
-  background: var(--yellow);
+  background: var(--light-yellow);
   transition: width 0.5s ease;
 }
 
