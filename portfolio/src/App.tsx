@@ -20,14 +20,51 @@ function App() {
           </div>
 
           <div className="w-1/2 hidden lg:flex text-xl">
-            <li><a href="#home">Andy Chen</a></li>
+            <li><a href="#home" 
+            className="relative 
+            font-bold text-white hover:text-transparent bg-clip-text 
+            bg-gradient-to-r from-[var(--yellow)] to-[var(--yellow)] bg-[length:0%_100%] 
+            hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
+            draggable="false">Andy Chen</a></li>
           </div>
 
           <div className="hidden lg:flex justify-items-center text-xl gap-8 2xl:gap-16">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about_me">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#home" 
+                className="relative 
+                font-bold text-white hover:text-transparent bg-clip-text 
+                bg-gradient-to-r from-[var(--yellow)] to-[var(--yellow)] bg-[length:0%_100%] 
+                hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
+                draggable="false">Home
+              </a>
+            </li>
+            <li>
+              <a href="#about_me" 
+                className="relative 
+                font-bold text-white hover:text-transparent bg-clip-text 
+                bg-gradient-to-r from-[var(--yellow)] to-[var(--yellow)] bg-[length:0%_100%] 
+                hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
+                draggable="false">About Me
+              </a>
+            </li>
+            <li>
+              <a href="#projects" 
+                className="relative 
+                font-bold text-white hover:text-transparent bg-clip-text 
+                bg-gradient-to-r from-[var(--yellow)] to-[var(--yellow)] bg-[length:0%_100%] 
+                hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
+                draggable="false">Projects
+              </a>
+            </li>
+            <li>
+              <a href="#contact" 
+                className="relative 
+                font-bold text-white hover:text-transparent bg-clip-text 
+                bg-gradient-to-r from-[var(--yellow)] to-[var(--yellow)] bg-[length:0%_100%] 
+                hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
+                draggable="false">Contact
+              </a>
+            </li>
           </div>
         </ul>
       </nav>

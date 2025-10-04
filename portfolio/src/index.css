@@ -14,3 +14,21 @@ html, body {
 @theme {
   --font-ubuntu: "Ubuntu Sans Mono", monospace;
 }
+
+
+/* Animations */
+
+.underline-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* underline thickness */
+  width: 0;
+  background: var(--yellow);
+  transition: width 0.5s ease;
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+}
