@@ -5,3 +5,7 @@
   --white: #FFFFFF;
   --yellow: #FFD700;
 }
+
+html, body {
+  @apply bg-[var(--dark-blue)] text-[var(--white)];
+}
