@@ -2,12 +2,14 @@ function App() {
 
   return (
     <main className="min-h-dvh w-full bg-[var(--dark-blue)] text-[var(--white)]">
-      <nav>
-        <ul className="text-[var(--white)] select-none flex justify-between items-center bg-blue-400 h-16 px-4 lg:px-8">
+      <nav className="font-ubuntu">
+        <ul className="text-[var(--white)] select-none flex justify-between items-center h-16 px-4 lg:px-8
+        border-b border-[var(--yellow)]
+        ">
 
           <div className="lg:hidden">
             <svg
-              className="w-12 h-8"
+              className="w-10 h-6"
               viewBox="0 0 78 51" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg">
@@ -17,11 +19,11 @@ function App() {
             </svg>
           </div>
 
-          <div className="w-1/2 hidden lg:flex">
+          <div className="w-1/2 hidden lg:flex text-xl">
             <li><a href="#home">Andy Chen</a></li>
           </div>
-          
-          <div className="hidden lg:flex justify-evenly justify-items-center">
+
+          <div className="hidden lg:flex justify-items-center text-xl gap-8 2xl:gap-16">
             <li><a href="#home">Home</a></li>
             <li><a href="#about_me">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
