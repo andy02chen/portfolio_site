@@ -6,30 +6,26 @@ function App() {
 
   return (
     <main className="min-h-dvh w-full bg-[var(--dark-blue)] text-[var(--white)]">
-      <nav className="font-ubuntu">
-        <ul className="text-[var(--white)] select-none flex justify-between items-center h-16 px-4 lg:px-8
-        border-b border-[var(--light-yellow)]
-        ">
+      <nav className="font-ubuntu border-b border-[var(--light-yellow)]">
 
-          
-          <div className="lg:hidden">
-            {!showHamburgerMenu &&
-              <div className="w-10 h-8"
-                onClick={() => setShowHamburgerMenu(true)}
-              >
-                <svg
-                  className="w-full h-full"
-                  viewBox="0 0 78 51" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 0V11.087H69.6968L78 0H0Z" fill="white"/>
-                  <path d="M0 39.9131V51H55.5212L62.1356 39.9131H0Z" fill="white"/>
-                  <path d="M0 19.9565V31.0435H62.609L70.0678 19.9565H0Z" fill="#FFFF33"/>
-                </svg>
-              </div>
-            }
-            
-            {showHamburgerMenu && 
+        {/* Mobile Nav Bar */}
+        <div className={`lg:hidden w-full p-4 
+          ${showHamburgerMenu? "border-t border-l border-r border-[var(--light-yellow)]" : ""}`}>
+          {!showHamburgerMenu &&
+            <div className="w-10 h-8"
+              onClick={() => setShowHamburgerMenu(true)}
+            >
+              <svg className="w-full h-full" viewBox="0 0 334 334" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0V72.6087H298.445L334 3.84695e-06L0 0Z" fill="white"/>
+              <path d="M0 261.391V334H237.744L266.068 261.391L0 261.391Z" fill="white"/>
+              <path d="M0 130.696V203.304H268.095L300.034 130.696L0 130.696Z" fill="#FFFF33"/>
+              </svg>
+            </div>
+          }
+
+          { showHamburgerMenu && 
+            <div className="w-full h-50 bg-[var(--dark-blue)]
+            ">
               <div className="w-10 h-8"
                 onClick={() => setShowHamburgerMenu(false)}
               >
@@ -50,9 +46,16 @@ function App() {
                   </g>
                 </svg>
               </div>
-            }
-          </div>
-
+            </div>
+          }
+        </div>
+          
+        {/* Desktop Nav Bar */}
+          <ul
+            className="text-[var(--white)] select-none hidden lg:flex justify-between items-center 
+                      px-4 lg:px-8 
+                      h-12 lg:h-16"
+          >
           <div className="w-1/2 hidden lg:flex text-xl">
             <li><a href="#home" 
             className="relative 
