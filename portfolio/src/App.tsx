@@ -14,6 +14,19 @@ function App() {
           ${showHamburgerMenu? "border-t border-l border-r border-[var(--light-yellow)]" : ""}`}>
           
           {/* Menu Button */}
+          {/* <button className={`transition-all duration-500 ease-in-out
+          ${!showHamburgerMenu ? 
+          'w-10 h-10 m-4 opacity-100 translate-y-0' : 
+          "max-h-0 opacity-0 -translate-y-4 overflow-hidden pointer-events-none"}`}
+            onClick={() => setShowHamburgerMenu(true)}
+          >
+            <svg className="w-full h-full" viewBox="0 0 334 334" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0V72.6087H298.445L334 3.84695e-06L0 0Z" fill="white"/>
+            <path d="M0 261.391V334H237.744L266.068 261.391L0 261.391Z" fill="white"/>
+            <path d="M0 130.696V203.304H268.095L300.034 130.696L0 130.696Z" fill="#FFFF33"/>
+            </svg>
+          </button> */}
+          
           {!showHamburgerMenu &&
             <button className="w-10 h-10 m-4"
               onClick={() => setShowHamburgerMenu(true)}
@@ -27,11 +40,19 @@ function App() {
           }
 
           {/* Menu */}
-          { showHamburgerMenu && 
-            <div className="w-full bg-[var(--dark-blue)] flex flex-col">
+            <div className={`w-full bg-[var(--dark-blue)] flex flex-col 
+            transition-all duration-500 ease-in-out
+            ${showHamburgerMenu 
+              ? 'max-h-screen opacity-100 translate-y-0' 
+              : 'max-h-0 opacity-0 -translate-y-4 overflow-hidden pointer-events-none'
+            }`}>
             {/* Cross Button */}
             <button 
-              className="w-10 h-10 m-4"
+              className={`w-10 h-10 m-4 transition-all duration-700
+                ${showHamburgerMenu 
+                  ? 'opacity-100 rotate-0' 
+                  : 'opacity-0 rotate-90 pointer-events-none'
+                }`}
               onClick={() => setShowHamburgerMenu(false)}
             >
               <svg className="h-full w-full" viewBox="0 0 334 335" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +81,7 @@ function App() {
                   href="#home" 
                   draggable="false" 
                   className="flex flex-row items-center gap-4 py-5 px-6"
-                  onClick={() => setNav('home')}
+                  onClick={() => {setNav('home'), setShowHamburgerMenu(false)}}
                 >
                   <div className="h-12 w-12 flex-shrink-0">
                     <svg className="h-full w-full" viewBox="0 0 291 326" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +99,7 @@ function App() {
                   href="#about_me" 
                   draggable="false" 
                   className="flex flex-row items-center gap-4 py-5 px-6"
-                  onClick={() => setNav('about_me')}
+                  onClick={() => {setNav('about_me'), setShowHamburgerMenu(false)}}
                 >
                   <div className="h-12 w-12 flex-shrink-0">
                     <svg className="h-full w-full" viewBox="0 0 63 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +119,7 @@ function App() {
                   href="#projects" 
                   draggable="false" 
                   className="flex flex-row items-center gap-4 py-5 px-6"
-                  onClick={() => setNav('projects')}
+                  onClick={() => {setNav('projects'), setShowHamburgerMenu(false)}}
                 >
                   <div className="h-12 w-12 flex-shrink-0">
                     <svg className="h-full w-full" viewBox="0 0 70 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +137,7 @@ function App() {
                   href="#contact" 
                   draggable="false" 
                   className="flex flex-row items-center gap-4 py-5 px-6"
-                  onClick={() => setNav('contact')}
+                  onClick={() => {setNav('contact'), setShowHamburgerMenu(false)}}
                 >
                   <div className="h-12 w-12 flex-shrink-0">
                     <svg className="h-full w-full" viewBox="0 0 53 67" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +149,6 @@ function App() {
               </li>
             </ul>
           </div>
-          }
         </div>
           
         {/* Desktop Nav Bar */}
