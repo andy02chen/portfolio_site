@@ -11,29 +11,23 @@ function App() {
   const [animatingCross, setAnimatingCross] = useState(false);
 
   const handleHamburgerClick = () => {
-    setAnimatingHamburger(true);
     setShowCross(true);
+    setAnimatingHamburger(true);
     setTimeout(() => {
       setAnimatingCross(true);
       setShowHamburgerMenu(true);
     }, 50);
-    setTimeout(() => {
-      setShowHamburger(false);
-    });
+    setShowHamburger(false);
   };
 
   const handleCrossClick = () => {
     setShowHamburgerMenu(false);
+    setAnimatingCross(false);
+    setShowHamburger(true);
     setTimeout(() => {
-      setAnimatingCross(false);
-      setShowHamburger(true);
-      setTimeout(() => {
-        setAnimatingHamburger(false);
-      }, 50);
-      setTimeout(() => {
-        setShowCross(false);
-      });
-    });
+      setAnimatingHamburger(false);
+    }, 50);
+    setShowCross(false);
   };
 
   const handleNavClick = (link: SetStateAction<string>) => {
@@ -42,8 +36,10 @@ function App() {
   };
 
   return (
-    <main className="min-h-dvh w-full bg-[var(--dark-blue)] text-[var(--white)]">
-      <nav className="font-ubuntu border-b border-[var(--light-yellow)]">
+    <main className="min-h-dvh w-full bg-[var(--dark-blue)] text-[var(--white)]
+      grid-background
+    ">
+      <nav className="font-ubuntu border-b border-[var(--light-yellow)] bg-[var(--dark-blue)]">
 
         {/* Mobile Nav Bar */}
         <div className={`lg:hidden w-full

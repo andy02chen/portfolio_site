@@ -34,3 +34,21 @@ html, body {
 .underline-hover:hover::after {
   width: 100%;
 }
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+
+  100%{
+    background-position: 80px 80px;
+  }
+}
+
+.grid-background {
+  background-image: 
+      linear-gradient(to right, #FFD7001A 1px, transparent 1px),
+      linear-gradient(to bottom, #FFD7001A 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: gridMove 4s linear infinite;
+}
