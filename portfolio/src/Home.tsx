@@ -4,13 +4,15 @@ import pfp from './assets/pic.jpg';
 export default function Home() {
   return(
     <section className="w-full h-screen flex flex-row justify-center items-center">
-      <div className="w-1/2 bg-red-100 flex flex-1">
-        HI
+      <div className="w-1/2 flex flex-1 items-center justify-center">
+        <h1 className='font-furore font-bold text-5xl'>
+          HELLO.
+        </h1>
       </div>
 
-      <div className="w-1/2 bg-blue-200 flex flex-1 items-center justify-center">
+      <div className="w-1/2 flex flex-1 items-center justify-center">
         {/* PFP */}
-        <svg className='w-2xl auto' viewBox="0 0 591 504" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className='w-3xl auto' viewBox="0 0 591 504" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <clipPath id="frameClip">
               <path d="M302 2H2V452H152L202 502H502V52H352L302 2Z"/>
