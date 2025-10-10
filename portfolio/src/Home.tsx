@@ -4,15 +4,31 @@ import pfp from './assets/pic.jpg';
 export default function Home() {
   return(
     <section className="w-full h-screen flex flex-row justify-center items-center">
-      <div className="w-1/2 flex flex-1 items-center justify-center">
-        <h1 className='font-furore font-bold text-5xl'>
-          HELLO.
+      {/* Left Div */}
+      <div className="w-1/2 h-3/4 flex flex-1 items-center justify-center flex-col gap-4">
+        {/* Text div */}
+        <h1 className='font-furore font-bold text-7xl'>
+          HELLO
+          <span className='text-7xl text-[var(--yellow)]'>
+            .
+          </span>
         </h1>
+        <div className='w-1/2 flex justify-end'>
+          <h1 className='text-3xl font-ubuntu'>
+            I'm Andy Chen
+          </h1>
+        </div>
+
+        <div className='w-1/2 h-1/4 flex flex-row justify-center items-center gap-8'>
+          <button>Sup</button>
+          <button>Sup2</button>
+        </div>
       </div>
 
+      {/* Right Div */}
       <div className="w-1/2 flex flex-1 items-center justify-center">
         {/* PFP */}
-        <svg className='w-3xl auto' viewBox="0 0 591 504" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className='w-xl lg:w-3xl auto' viewBox="0 0 591 504" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <clipPath id="frameClip">
               <path d="M302 2H2V452H152L202 502H502V52H352L302 2Z"/>
