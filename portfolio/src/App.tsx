@@ -38,9 +38,9 @@ function App() {
 
   return (
     <main className="min-h-dvh w-full bg-[var(--dark-blue)] text-[var(--white)]
-      grid-background 
+      grid-background pt-[73px] lg:pt-16
     ">
-      <nav className="font-ubuntu w-full lg:h-16 border-b border-[var(--light-yellow)] bg-[var(--dark-blue)] fixed top-0 z-50">
+      <nav className="font-ubuntu w-full lg:h-16 border-b border-[var(--light-yellow)] bg-[var(--dark-blue)] fixed top-0 left-0 right-0 z-50">
 
         {/* Mobile Nav Bar */}
         <div className={`lg:hidden w-full

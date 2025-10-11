@@ -8,7 +8,7 @@ type HomeProps = {
 export default function Home({ setNav }: HomeProps) {
 
   return(
-    <section className="w-full h-screen flex flex-row justify-center items-center">
+    <section className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)] flex flex-col lg:flex-row justify-center items-center">
       {/* Left Div */}
       <div className="w-1/2 h-3/4 flex flex-1 items-center justify-center flex-col gap-16 2xl:gap-4 select-none">
         {/* Text div */}
