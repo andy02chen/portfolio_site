@@ -100,7 +100,7 @@ function App() {
             ? 'max-h-screen opacity-100 translate-y-0' 
             : 'max-h-0 opacity-0 -translate-y-4 overflow-hidden'
           }`}>
-            <ul className="flex flex-col text-3xl text-[var(--white)]">
+            <ul className="flex flex-col text-2xl sm:text-3xl text-[var(--white)]">
               <li className={`w-full border-l-[5px] overflow-hidden text-ellipsis whitespace-nowrap
                 ${ nav === 'home'? "bg-[var(--light-blue)] border-[var(--light-yellow)]" : 
                 "bg-[var(--dark-blue)] border-transparent" }`}>

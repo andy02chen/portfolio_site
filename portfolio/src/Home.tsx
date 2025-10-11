@@ -10,27 +10,28 @@ export default function Home({ setNav }: HomeProps) {
   return(
     <section className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)] flex flex-col lg:flex-row justify-center items-center">
       {/* Left Div */}
-      <div className="w-1/2 h-3/4 flex flex-1 items-center justify-center flex-col gap-8 lg:gap-16 select-none">
+      <div className="w-full md:w-1/2 h-screen flex flex-1 items-center justify-center flex-col gap-4 md:gap-8 lg:gap-16 
+      select-none overflow-hidden">
         {/* Text div */}
-        <h1 className='font-furore font-bold text-6xl md:text-7xl'>
+        <h1 className='font-furore font-bold text-5xl md:text-6xl lg:text-7xl'>
           HELLO
           <span className='text-7xl text-[var(--yellow)]'>
             .
           </span>
         </h1>
-        <div className='w-full lg:w-1/2 flex text-ecnter justify-center lg:justify-end'>
+        <div className='w-full lg:w-1/2 flex text-center justify-center lg:justify-end'>
           <h1 className='text-2xl md:text-4xl font-ubuntu'>
             I'm Andy Chen
           </h1>
         </div>
 
-        <div className='w-1/2 h-1/4 flex flex-col 2xl:flex-row justify-center items-center gap-8
+        <div className='w-full h-3/4 md:h-1/4 flex flex-col 2xl:flex-row justify-center items-center gap-8
         '>
-          <button className='cursor-pointer group'>
+          <button className='cursor-pointer group w-full max-w-[250px] sm:max-w-[250px] md:max-w-[339px]'>
             <a href='#projects'
             onClick={() => setNav("projects")}>
-            <svg className='transition-all duration-500' 
-                width="339" height="76" viewBox="0 0 339 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className='transition-all duration-500 w-full h-auto'
+              viewBox="0 0 339 76" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 68L53.4921 8H335L295.251 68H18Z" 
                     className="transition-all duration-500 fill-[#FFD700] stroke-[#FFD700]" 
                     strokeWidth="4"/>
@@ -54,9 +55,9 @@ export default function Home({ setNav }: HomeProps) {
               </text>
             </svg></a>
           </button>
-          <button className='cursor-pointer'>
+          <button className='cursor-pointer group w-full max-w-[250px] sm:max-w-[250px] md:max-w-[339px]'>
             <a href='#contact' onClick={() => setNav("contact")}>
-              <svg className='transition-all hover:drop-shadow-[0_0_3px_var(--yellow)]' width="325" height="83" viewBox="0 0 325 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className='transition-all hover:drop-shadow-[0_0_3px_var(--yellow)] w-full h-auto' viewBox="0 0 325 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 74.2651L39.4921 14.2651H321L281.251 74.2651H4Z" stroke="#FFD700" strokeWidth="4"/>
                 <rect x="269" y="58" width="25" height="22.2892" fill="white"/>
                 <path d="M63.8654 20.2913L11.0701 20.1987L4.00048 31.2375L56.7958 31.3301L63.8654 20.2913Z" fill="white" stroke="white"/>
