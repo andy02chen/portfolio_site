@@ -10,7 +10,7 @@ export default function Home({ setNav }: HomeProps) {
   return(
     <section className="w-full h-screen flex flex-row justify-center items-center">
       {/* Left Div */}
-      <div className="w-1/2 h-3/4 flex flex-1 items-center justify-center flex-col gap-4 select-none ">
+      <div className="w-1/2 h-3/4 flex flex-1 items-center justify-center flex-col gap-16 2xl:gap-4 select-none">
         {/* Text div */}
         <h1 className='font-furore font-bold text-7xl'>
           HELLO
@@ -24,7 +24,8 @@ export default function Home({ setNav }: HomeProps) {
           </h1>
         </div>
 
-        <div className='w-1/2 h-1/4 flex flex-row justify-center items-center gap-8'>
+        <div className='w-1/2 h-1/4 flex flex-col 2xl:flex-row justify-center items-center gap-8
+        '>
           <button className='cursor-pointer group'>
             <a href='#projects'
             onClick={() => setNav("projects")}>
@@ -80,8 +81,8 @@ export default function Home({ setNav }: HomeProps) {
       {/* Right Div */}
       <div className="w-1/2 flex flex-1 items-center justify-center">
         {/* PFP */}
-        <div className='w-xl lg:w-3xl'>
-          <svg className='w-full h-auto' viewBox="0 0 591 504" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div>
+          <svg className='w-sm lg:w-lg 2xl:w-3xl h-auto' viewBox="0 0 591 504" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <clipPath id="frameClip">
                 <path d="M302 2H2V452H152L202 502H502V52H352L302 2Z"/>
