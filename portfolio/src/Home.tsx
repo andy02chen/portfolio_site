@@ -10,16 +10,16 @@ export default function Home({ setNav }: HomeProps) {
   return(
     <section className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)] flex flex-col lg:flex-row justify-center items-center">
       {/* Left Div */}
-      <div className="w-1/2 h-3/4 flex flex-1 items-center justify-center flex-col gap-16 2xl:gap-4 select-none">
+      <div className="w-1/2 h-3/4 flex flex-1 items-center justify-center flex-col gap-8 lg:gap-16 select-none">
         {/* Text div */}
-        <h1 className='font-furore font-bold text-7xl'>
+        <h1 className='font-furore font-bold text-6xl md:text-7xl'>
           HELLO
           <span className='text-7xl text-[var(--yellow)]'>
             .
           </span>
         </h1>
-        <div className='w-1/2 flex justify-end'>
-          <h1 className='text-4xl font-ubuntu'>
+        <div className='w-full lg:w-1/2 flex text-ecnter justify-center lg:justify-end'>
+          <h1 className='text-2xl md:text-4xl font-ubuntu'>
             I'm Andy Chen
           </h1>
         </div>
@@ -79,12 +79,12 @@ export default function Home({ setNav }: HomeProps) {
       </div>
 
       {/* Right Div */}
-      <div className="w-1/2 flex flex-1 items-center justify-center">
+      <div className="w-full md:w-3/4 flex flex-1 items-center justify-center">
         {/* PFP */}
-        <div>
-          <svg className='w-sm lg:w-lg 2xl:w-3xl h-auto' viewBox="0 0 591 504" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className='w-full flex flex-1 items-center justify-center'>
+          <svg className='w-3/4 lg:hidden h-auto' viewBox="0 0 502 502" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <clipPath id="frameClip">
+              <clipPath id="frameClipSmall">
                 <path d="M302 2H2V452H152L202 502H502V52H352L302 2Z"/>
               </clipPath>
             </defs>
@@ -94,7 +94,29 @@ export default function Home({ setNav }: HomeProps) {
               height="500" 
               x="2" 
               y="2"
-              clipPath="url(#frameClip)"
+              clipPath="url(#frameClipSmall)"
+              preserveAspectRatio="xMidYMid slice"
+            />
+            <path d="M302 2H2V452H152L202 502H502V52H352L302 2Z" stroke="#FFD700" strokeWidth="3" fill="none"/>
+            <path d="M564.865 62.7224L462.885 63.4956L449 87.813L550.98 87.0398L564.865 62.7224Z" fill="white" stroke="white"/>
+            <path d="M589.865 103.722L487.885 104.496L474 128.813L575.98 128.04L589.865 103.722Z" fill="white" stroke="white"/>
+            <rect x="16" y="432" width="43" height="43" fill="white"/>
+            <rect x="109" y="466" width="34" height="34" fill="#FFD700"/>
+          </svg>
+
+          <svg className='hidden lg:block lg:w-lg 2xl:w-3xl h-auto' viewBox="0 0 591 504" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="frameClipLarge">
+                <path d="M302 2H2V452H152L202 502H502V52H352L302 2Z"/>
+              </clipPath>
+            </defs>
+            <image
+              href={pfp}
+              width="500" 
+              height="500" 
+              x="2" 
+              y="2"
+              clipPath="url(#frameClipLarge)"
               preserveAspectRatio="xMidYMid slice"
             />
             <path d="M302 2H2V452H152L202 502H502V52H352L302 2Z" stroke="#FFD700" strokeWidth="3" fill="none"/>
