@@ -1,4 +1,4 @@
-import { useEffect, useState, type SetStateAction } from "react";
+import { useState, type SetStateAction } from "react";
 import Home from "./Home";
 
 function App() {
@@ -190,7 +190,8 @@ function App() {
               text-white hover:text-transparent bg-clip-text 
               bg-gradient-to-r from-[var(--light-yellow)] to-[var(--light-yellow)] bg-[length:0%_100%] 
               hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
-              draggable="false">
+              draggable="false"
+              onClick={() => setNav('home')}>
                 Andy Chen</a>
             </li>
           </div>
@@ -245,7 +246,7 @@ function App() {
       </nav>
 
       {/* Home Page */}
-      <Home/>
+      <Home setNav={setNav}/>
     </main>
   )
 }
