@@ -1,5 +1,6 @@
 import { useState, type SetStateAction } from "react";
 import Home from "./Home";
+import About from "./About";
 
 function App() {
 
@@ -36,9 +37,22 @@ function App() {
     handleCrossClick();
   };
 
+  const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const navbarHeight = window.innerWidth >= 1024 ? 64 : 73; // lg breakpoint
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ 
+      top: elementPosition - navbarHeight, 
+      behavior: 'smooth' 
+    });
+  }
+};
+
   return (
     <main className="min-h-dvh w-full bg-[var(--dark-blue)] text-[var(--white)]
       grid-background pt-[73px] lg:pt-16
+      scroll-smooth
     ">
       <nav className="font-ubuntu w-full lg:h-16 border-b border-[var(--light-yellow)] bg-[var(--dark-blue)] fixed top-0 left-0 right-0 z-50">
 
@@ -108,7 +122,7 @@ function App() {
                   href="#home" 
                   draggable="false" 
                   className="flex flex-row items-center gap-4 py-5 px-6"
-                  onClick={() => handleNavClick('home')}
+                  onClick={(e) => {e.preventDefault();setNav('home');scrollToSection('home');handleNavClick('home')}}
                 >
                   <div className="h-12 w-12 flex-shrink-0">
                     <svg className="h-full w-full" viewBox="0 0 291 326" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,7 +140,7 @@ function App() {
                   href="#about_me" 
                   draggable="false" 
                   className="flex flex-row items-center gap-4 py-5 px-6"
-                  onClick={() => handleNavClick('about_me')}
+                  onClick={(e) => {e.preventDefault();setNav('about_me');scrollToSection('about_me');handleNavClick('about_me')}}
                 >
                   <div className="h-12 w-12 flex-shrink-0">
                     <svg className="h-full w-full" viewBox="0 0 63 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +160,7 @@ function App() {
                   href="#projects" 
                   draggable="false" 
                   className="flex flex-row items-center gap-4 py-5 px-6"
-                  onClick={() => handleNavClick('projects')}
+                  onClick={(e) => {e.preventDefault();setNav('projects');scrollToSection('projects');handleNavClick('projects')}}
                 >
                   <div className="h-12 w-12 flex-shrink-0">
                     <svg className="h-full w-full" viewBox="0 0 70 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,7 +178,7 @@ function App() {
                   href="#contact" 
                   draggable="false" 
                   className="flex flex-row items-center gap-4 py-5 px-6"
-                  onClick={() => handleNavClick('contact')}
+                  onClick={(e) => {e.preventDefault();setNav('contact');scrollToSection('contact');handleNavClick('contact')}}
                 >
                   <div className="h-12 w-12 flex-shrink-0">
                     <svg className="h-full w-full" viewBox="0 0 53 67" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +205,12 @@ function App() {
               bg-gradient-to-r from-[var(--light-yellow)] to-[var(--light-yellow)] bg-[length:0%_100%] 
               hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
               draggable="false"
-              onClick={() => setNav('home')}>
+              onClick={(e) => {
+                e.preventDefault();
+                setNav("home");
+                window.scrollTo({ top: 0});
+              }}
+              >
                 Andy Chen</a>
             </li>
           </div>
@@ -204,7 +223,12 @@ function App() {
                 bg-gradient-to-r from-[var(--light-yellow)] to-[var(--light-yellow)] bg-[length:0%_100%] 
                 hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
                 draggable="false"
-                onClick={() => setNav('home')}>
+                onClick={(e) => {
+                  e.preventDefault();
+                  setNav("home");
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                >
                   Home
               </a>
             </li>
@@ -215,7 +239,7 @@ function App() {
                 bg-gradient-to-r from-[var(--light-yellow)] to-[var(--light-yellow)] bg-[length:0%_100%] 
                 hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
                 draggable="false"
-                onClick={() => setNav('about_me')}>
+                onClick={(e) => {e.preventDefault();setNav('about_me');scrollToSection('about_me')}}>
                   About Me
               </a>
             </li>
@@ -226,7 +250,7 @@ function App() {
                 bg-gradient-to-r from-[var(--light-yellow)] to-[var(--light-yellow)] bg-[length:0%_100%] 
                 hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
                 draggable="false"
-                onClick={() => setNav('projects')}>
+                onClick={(e) => {e.preventDefault();setNav('projects');scrollToSection('projects')}}>
                   Projects
               </a>
             </li>
@@ -237,7 +261,7 @@ function App() {
                 bg-gradient-to-r from-[var(--light-yellow)] to-[var(--light-yellow)] bg-[length:0%_100%] 
                 hover:bg-[length:100%_100%] transition-all duration-500 underline-hover" 
                 draggable="false"
-                onClick={() => setNav('contact')}>
+                onClick={(e) => {e.preventDefault();setNav('contact');scrollToSection('contact')}}>
                   Contact
               </a>
             </li>
@@ -247,6 +271,9 @@ function App() {
 
       {/* Home Page */}
       <Home setNav={setNav}/>
+
+      {/* About Me */}
+      <About setNav={setNav}/>
     </main>
   )
 }

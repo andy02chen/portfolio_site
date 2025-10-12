@@ -9,8 +9,15 @@
   --light-blue: #2B394D;
 }
 
-html, body {
-  @apply bg-[var(--dark-blue)] text-[var(--white)];
+html {
+  scroll-behavior: smooth !important;
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--white);
 }
 
 @theme {

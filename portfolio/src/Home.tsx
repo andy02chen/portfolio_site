@@ -8,7 +8,8 @@ type HomeProps = {
 export default function Home({ setNav }: HomeProps) {
 
   return(
-    <section className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)] flex flex-col lg:flex-row justify-center items-center">
+    <section id='home' className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)]
+    flex flex-col lg:flex-row justify-center items-center">
       {/* Left Div */}
       <div className="w-full md:w-1/2 h-screen flex flex-1 items-center justify-center flex-col gap-4 md:gap-8 lg:gap-16 
       select-none overflow-hidden">
