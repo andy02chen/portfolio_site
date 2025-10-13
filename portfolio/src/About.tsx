@@ -1,4 +1,6 @@
 
+import background_img from './assets/about_me_background.jpg';
+
 type HomeProps = {
   setNav: React.Dispatch<React.SetStateAction<string>>;
 };
@@ -12,12 +14,26 @@ export default function About({ setNav }: HomeProps) {
 
         {/* Left Div */}
         <div className="flex-2 flex flex-col">
-          <h1 className="font-furore font-bold text-4xl sm:text-6xl lg:text-7xl px-4">
+          <h1 className="font-furore font-bold text-4xl sm:text-6xl lg:text-7xl px-4 flex justify-center w-3/4">
             About me __
           </h1>
 
           <div className="flex h-full items-center justify-center">
             <svg className='w-8/10 h-auto' viewBox="0 0 1101 664" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="aboutMeClip">
+                  <rect x="78.5" y="25.5" width="1021" height="575" stroke="#FFD700" stroke-width="3"/>
+                </clipPath>
+              </defs>
+              <image 
+                href={background_img}
+                width="1101" 
+                height="664" 
+                x="2" 
+                y="2"
+                clipPath="url(#aboutMeClip)"
+                preserveAspectRatio="xMidYMid slice"
+              />
               <rect x="78.5" y="25.5" width="1021" height="575" stroke="#FFD700" stroke-width="3"/>
               <rect x="161.57" y="642.5" width="577.796" height="21" fill="#FFD700" stroke="#1F2937"/>
               <rect x="520.933" y="606.5" width="577.796" height="21" fill="white" stroke="#1F2937"/>
