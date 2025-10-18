@@ -61,21 +61,25 @@ flex items-center justify-center py-8">
           <div className="flex-1 h-auto flex justify-center items-center">
             <div className='bg-[var(--dark-blue)] h-auto w-9/10 p-4 max-h-[60vh] overflow-y-auto'>
               <p className='font-ubuntu text-sm xl:text-lg 2xl:text-xl 3xl:text-2xl'>
-                Hi, I'm Andy Chen, a Bachelor of Computing graduate from the University of Sydney, majoring in Computer Science.
+                Hi, I'm <span className='font-bold text-[var(--yellow)]'>Andy Chen</span>, a Bachelor of Computing graduate 
+                from the <span className='font-bold text-[var(--yellow)]'>University of Sydney</span>, majoring in Computer Science.
                 <br/><br/>
-                I currently work as a Junior Solution Engineer, where I help manage customer IT infrastructure, configure endpoint 
+                I currently work as a <span className='font-bold text-[var(--yellow)]'>Junior Solution Engineer</span>, 
+                where I help manage customer IT infrastructure, configure endpoint 
                 devices, and provide technical support.
                 <br/><br/>
                 I've always loved solving puzzles, tackling challenges, and building things, whether that's putting together 
-                LEGO sets and jigsaw puzzles, developing software, or assembling my own PC and workspace setup, which you can see 
+                LEGO sets and jigsaw puzzles, developing software, or assembling PCs and workspace setup, which you can see 
                 in the image above.
                 <br/><br/>
                 What draws me to development is the similarity to playing a game. You have the freedom to choose your own 
                 approach, try different solutions, and it's always rewarding to see a project come together, like beating 
                 a tough boss or reaching the end credits.
                 <br/><br/>
-                Outside of work, I enjoy music, anime, gaming, reading, and working out. I've always been fascinated by 
-                technology, which inspired me to design my portfolio with a futuristic, Cyberpunk inspired UI. (easily one of my top 
+                Outside of work, I enjoy <span className='font-bold text-[var(--yellow)]'>music, anime, gaming, 
+                reading, and working out</span>. I've always been fascinated by 
+                technology, which inspired me to design my portfolio with a 
+                <span className='font-bold text-[var(--yellow)]'> futuristic, Cyberpunk inspired UI</span>. (easily one of my top 
                 five favourite games + anime)
                 <br/><br/>
                 You can check out some of my projects below.
