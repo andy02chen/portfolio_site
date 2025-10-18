@@ -7,9 +7,9 @@ type HomeProps = {
 
 export default function About({ setNav }: HomeProps) {
   return(
-    <section id="about_me" className="w-full h-[calc(100vh-73px)] lg:h-[calc(100vh-64px)]
-    flex items-center justify-center">
-      <div className="w-9/10 h-9/10 bg-[var(--light-blue)] border-1 border-[var(--yellow)]
+    <section id="about_me" className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)]
+flex items-center justify-center py-8">
+      <div className="w-[85vw] h-[85vh] bg-[var(--light-blue)] border-1 border-[var(--yellow)]
       flex flex-col">
 
         {/* Top Div */}
@@ -25,17 +25,17 @@ export default function About({ setNav }: HomeProps) {
           </div>
         </div>
 
-        {/* Buttom Div */}
-        <div className='flex flex-col 2xl:flex-row w-full h-full'>
+        {/* Bottom Div */}
+        <div className='flex flex-col 3xl:flex-row w-full h-full overflow-y-auto'>
 
           {/* Left Div */}
-          <div className="flex-auto flex flex-col">
+          <div className="flex-1 3xl:flex-auto flex flex-col">
             
             <div className="flex h-full items-center justify-center">
-              <svg className='w-8/10 h-auto' viewBox="0 0 1101 664" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className='w-3/5 3xl:w-8/10 h-auto' viewBox="0 0 1101 664" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <clipPath id="aboutMeClip">
-                    <rect x="78.5" y="25.5" width="1021" height="575" stroke="#FFD700" stroke-width="3"/>
+                    <rect x="78.5" y="25.5" width="1021" height="575" stroke="#FFD700" strokeWidth="3"/>
                   </clipPath>
                 </defs>
                 <image 
@@ -57,8 +57,8 @@ export default function About({ setNav }: HomeProps) {
           </div>
 
           {/* Right Div */}
-          <div className="flex-1 h-full flex justify-center items-center">
-            <div className='bg-[var(--dark-blue)] h-auto w-9/10 p-4'>
+          <div className="flex-1 h-auto flex justify-center items-center">
+            <div className='bg-[var(--dark-blue)] h-auto w-9/10 p-4 max-h-[60vh] overflow-y-auto'>
               <p className='font-ubuntu text-sm xl:text-lg 2xl:text-xl 3xl:text-2xl'>
                 Hi, I'm Andy Chen, a Computing graduate from the University of Sydney, majoring in Computer Science.
                 <br/><br/>
