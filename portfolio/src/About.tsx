@@ -10,14 +10,15 @@ export default function About({ setNav }: HomeProps) {
     <section id="about_me" className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)]
 flex items-center justify-center py-8">
       <div className="w-[85vw] h-[85vh] bg-[var(--light-blue)] border-1 border-[var(--yellow)]
-      flex flex-col">
+      flex flex-col gap-4 3xl:gap-0">
 
         {/* Top Div */}
         <div className='w-full h-auto'>
-          <div className="grid grid-cols-[4rem_auto_4rem] justify-stretch ...">
+          <div className="grid grid-cols-[1rem_auto_1rem] sm:grid-cols-[4rem_auto_4rem] justify-stretch">
             <div></div>
             <div>
-              <h1 className="font-furore font-bold text-4xl sm:text-6xl md:text-5xl xl:text-6xl 2xl:text-7xl px-4 w-full flex ">
+              <h1 className="font-furore font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl px-4 w-full flex
+              justify-center 3xl:justify-start">
                 About me __
               </h1>
             </div>
@@ -32,7 +33,7 @@ flex items-center justify-center py-8">
           <div className="flex-1 3xl:flex-auto flex flex-col">
             
             <div className="flex h-full items-center justify-center">
-              <svg className='w-3/5 3xl:w-8/10 h-auto' viewBox="0 0 1101 664" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className='w-3/4 3xl:w-8/10 h-auto' viewBox="0 0 1101 664" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <clipPath id="aboutMeClip">
                     <rect x="78.5" y="25.5" width="1021" height="575" stroke="#FFD700" strokeWidth="3"/>
@@ -60,7 +61,7 @@ flex items-center justify-center py-8">
           <div className="flex-1 h-auto flex justify-center items-center">
             <div className='bg-[var(--dark-blue)] h-auto w-9/10 p-4 max-h-[60vh] overflow-y-auto'>
               <p className='font-ubuntu text-sm xl:text-lg 2xl:text-xl 3xl:text-2xl'>
-                Hi, I'm Andy Chen, a Computing graduate from the University of Sydney, majoring in Computer Science.
+                Hi, I'm Andy Chen, a Bachelor of Computing graduate from the University of Sydney, majoring in Computer Science.
                 <br/><br/>
                 I currently work as a Junior Solution Engineer, where I help manage customer IT infrastructure, configure endpoint 
                 devices, and provide technical support.
