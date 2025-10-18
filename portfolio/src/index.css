@@ -23,6 +23,7 @@ body {
 @theme {
   --font-ubuntu: "Ubuntu Sans Mono", monospace;
   --font-furore: "Furore", sans-serif;
+  --breakpoint-3xl: 120rem;
 }
 
 @font-face {
