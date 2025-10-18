@@ -13,20 +13,26 @@ export default function About({ setNav }: HomeProps) {
       flex flex-col">
 
         {/* Top Div */}
-        <div className='w-full'>
-          <h1 className="font-furore font-bold text-4xl sm:text-6xl lg:text-7xl px-4 flex justify-center w-1/2">
-            About me __
-          </h1>
+        <div className='w-1/2 h-1/8'>
+          <div className="grid grid-cols-[4rem_auto_4rem] justify-stretch ...">
+            <div></div>
+            <div>
+              <h1 className="font-furore font-bold text-4xl sm:text-6xl lg:text-7xl px-4 w-full flex ">
+                About me __
+              </h1>
+            </div>
+            <div></div>
+          </div>
         </div>
 
-        
+        {/* Buttom Div */}
         <div className='flex flex-row w-full h-full'>
 
           {/* Left Div */}
           <div className="flex-auto flex flex-col">
             
             <div className="flex h-full items-center justify-center">
-              <svg className='w-8/10 h-auto' viewBox="0 0 1101 664" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className='w-9/10 h-auto' viewBox="0 0 1101 664" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <clipPath id="aboutMeClip">
                     <rect x="78.5" y="25.5" width="1021" height="575" stroke="#FFD700" stroke-width="3"/>
@@ -41,7 +47,7 @@ export default function About({ setNav }: HomeProps) {
                   clipPath="url(#aboutMeClip)"
                   preserveAspectRatio="xMidYMid slice"
                 />
-                <rect x="78.5" y="25.5" width="1021" height="575" stroke="#FFD700" stroke-width="3"/>
+                <rect x="78.5" y="25.5" width="1021" height="575" stroke="#FFD700" strokeWidth="3"/>
                 <rect x="161.57" y="642.5" width="577.796" height="21" fill="#FFD700" stroke="#1F2937"/>
                 <rect x="520.933" y="606.5" width="577.796" height="21" fill="white" stroke="#1F2937"/>
                 <path d="M1024.96 65.4932L1024.96 6.50683L1079.12 36L1024.96 65.4932Z" fill="white" stroke="#1F2937" strokeWidth="2"/>
@@ -51,9 +57,28 @@ export default function About({ setNav }: HomeProps) {
           </div>
 
           {/* Right Div */}
-          <div className="flex-1">
-            <div>
-              Sup
+          <div className="flex-1 h-full flex justify-center items-center">
+            <div className='bg-[var(--dark-blue)] h-auto w-9/10 p-4'>
+              <p className='font-ubuntu text-2xl '>
+                Hi, I'm Andy Chen, a Computing graduate from the University of Sydney, majoring in Computer Science.
+                <br/><br/>
+                I currently work as a Junior Solution Engineer, where I help manage customer IT infrastructure, configure endpoint 
+                devices, and provide technical support.
+                <br/><br/>
+                I've always loved solving puzzles, tackling challenges, and building things, whether that's putting together 
+                LEGO sets and jigsaw puzzles, developing software, or assembling my own PC and workspace setup, which you can see 
+                in the image above.
+                <br/><br/>
+                What draws me to development is the similarity to playing a game. You have the freedom to choose your own 
+                approach, try different solutions, and it's always rewarding to see a project come together, like beating 
+                a tough boss or reaching the end credits.
+                <br/><br/>
+                Outside of work, I enjoy music, anime, gaming, reading, and working out. I've always been fascinated by 
+                technology, which inspired me to design my portfolio with a futuristic, Cyberpunk inspired UI. (easily one of my top 
+                five favourite games + anime)
+                <br/><br/>
+                You can check out some of my projects below.
+              </p>
             </div>
           </div>
         </div>
