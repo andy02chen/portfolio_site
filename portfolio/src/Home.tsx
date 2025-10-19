@@ -1,5 +1,6 @@
 
 import pfp from './assets/pic.jpg';
+import resume from './assets/Andy Chen Resume.pdf';
 
 type HomeProps = {
   setNav: React.Dispatch<React.SetStateAction<string>>;
@@ -57,7 +58,7 @@ export default function Home({ setNav }: HomeProps) {
             </svg></a>
           </button>
           <button className='cursor-pointer group w-full max-w-[250px] sm:max-w-[250px] md:max-w-[339px]'>
-            <a href='#contact' onClick={() => setNav("contact")}>
+            <a href={resume} download>
               <svg className='transition-all hover:drop-shadow-[0_0_3px_var(--yellow)] w-full h-auto' viewBox="0 0 325 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 74.2651L39.4921 14.2651H321L281.251 74.2651H4Z" stroke="#FFD700" strokeWidth="4"/>
                 <rect x="269" y="58" width="25" height="22.2892" fill="white"/>
@@ -72,7 +73,7 @@ export default function Home({ setNav }: HomeProps) {
                   fontWeight="bold"
                   fontFamily='Ubuntu sans mono'
                 >
-                  Contacts
+                  See Resume
                 </text>
               </svg>
             </a>
