@@ -1,11 +1,7 @@
 
 import background_img from './assets/about_me_background.jpg';
 
-type HomeProps = {
-  setNav: React.Dispatch<React.SetStateAction<string>>;
-};
-
-export default function About({ setNav }: HomeProps) {
+export default function About() {
   return(
     <section id="about_me" className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)]
 flex items-center justify-center py-8">
@@ -19,7 +15,7 @@ flex items-center justify-center py-8">
             <div>
               <h1 className="font-furore font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl px-4 w-full flex
               justify-center 3xl:justify-start">
-                About me __
+                {`> About me __`}
               </h1>
             </div>
             <div></div>

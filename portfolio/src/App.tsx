@@ -1,6 +1,7 @@
 import { useState, type SetStateAction } from "react";
 import Home from "./Home";
 import About from "./About";
+import Projects from "./Projects";
 
 function App() {
 
@@ -273,7 +274,10 @@ function App() {
       <Home setNav={setNav}/>
 
       {/* About Me */}
-      <About setNav={setNav}/>
+      <About/>
+
+      {/* Projects */}
+      <Projects/>
     </main>
   )
 }
