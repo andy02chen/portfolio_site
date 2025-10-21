@@ -32,21 +32,31 @@ export default function Projects() {
               ${projectSelected === null ? "w-full" : "w-[25%]"}`}
             >
               <div
-                className="border border-[var(--yellow)] p-10 w-full cursor-pointer"
+                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
+                ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent" }`}
                 onClick={() => changeProject(1)}
               >
                 01
               </div>
-              <div className="border border-[var(--yellow)] p-10 w-full cursor-pointer"
-                onClick={() => changeProject(2)}>
+              <div
+                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
+                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent" }`}
+                onClick={() => changeProject(2)}
+              >
                 02
               </div>
-              <div className="border border-[var(--yellow)] p-10 w-full cursor-pointer"
-                onClick={() => changeProject(3)}>
+              <div
+                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
+                ${projectSelected === 3 ? "bg-[var(--yellow)]" : "bg-transparent" }`}
+                onClick={() => changeProject(3)}
+              >
                 03
               </div>
-              <div className="border border-[var(--yellow)] p-10 w-full cursor-pointer"
-                onClick={() => changeProject(4)}>
+              <div
+                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
+                ${projectSelected === 4 ? "bg-[var(--yellow)]" : "bg-transparent" }`}
+                onClick={() => changeProject(4)}
+              >
                 04
               </div>
             </div>
