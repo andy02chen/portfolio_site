@@ -5,13 +5,13 @@ import Projects from "./Projects";
 
 function App() {
 
-  const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
-  const [nav, setNav] = useState('home');
+  const [showHamburgerMenu, setShowHamburgerMenu] = useState<boolean>(false);
+  const [nav, setNav] = useState<string>('home');
 
-  const [showHamburger, setShowHamburger] = useState(true);
-  const [showCross, setShowCross] = useState(false);
-  const [animatingHamburger, setAnimatingHamburger] = useState(false);
-  const [animatingCross, setAnimatingCross] = useState(false);
+  const [showHamburger, setShowHamburger] = useState<boolean>(true);
+  const [showCross, setShowCross] = useState<boolean>(false);
+  const [animatingHamburger, setAnimatingHamburger] = useState<boolean>(false);
+  const [animatingCross, setAnimatingCross] = useState<boolean>(false);
 
   const handleHamburgerClick = () => {
     setShowCross(true);
