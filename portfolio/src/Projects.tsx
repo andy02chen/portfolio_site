@@ -64,8 +64,11 @@ export default function Projects() {
 
             {/* Description Div */}
             <div
-              className={`transition-all duration-500 overflow-hidden flex items-center justify-center p-4
-              ${projectSelected !== null ? "w-[75%] h-auto opacity-100" : "w-0 h-0 opacity-0"}`}
+              className={`transition-all duration-500 overflow-hidden flex items-center justify-center
+                ${projectSelected !== null 
+                  ? "w-[75%] max-h-full opacity-100 p-4" 
+                  : "w-0 opacity-0 p-0"
+                }`}
             >
               <svg className="w-full h-auto" viewBox="0 0 675 588" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 90V0H566L613 90H0Z" fill="#FFD700"/>
