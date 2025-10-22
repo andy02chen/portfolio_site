@@ -20,7 +20,8 @@ export default function Projects() {
         {/* Left Div */}
         <div className="w-[50%] h-full flex flex-col">
           <div>
-            <h1 className="font-furore font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl">
+            <h1 className="font-furore font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl
+            select-none">
               \\ Pr()jects __
             </h1>
           </div>
@@ -63,10 +64,54 @@ export default function Projects() {
 
             {/* Description Div */}
             <div
-              className={`transition-all duration-500 overflow-hidden bg-blue-900
+              className={`transition-all duration-500 overflow-hidden flex items-center justify-center p-4
               ${projectSelected !== null ? "w-[75%] h-auto opacity-100" : "w-0 h-0 opacity-0"}`}
             >
-              Description
+              <svg className="w-full h-auto" viewBox="0 0 675 588" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 90V0H566L613 90H0Z" fill="#FFD700"/>
+                <rect x="2" y="92" width="671" height="472" fill="#1F2937" stroke="#FFD700" stroke-width="4"/>
+                <rect x="271" y="109" width="379" height="20" fill="white"/>
+                <rect x="245" y="111" width="15" height="15" fill="white"/>
+                <path d="M31 543L82.2381 584.642H110.24L59.0022 543H31Z" fill="white" stroke="white"/>
+                <path d="M92 545L143.238 586.642H171.24L120.002 545H92Z" fill="white" stroke="white"/>
+                <path d="M146 545L197.238 586.642H225.24L174.002 545H146Z" fill="white" stroke="white"/>
+
+                {/* Back Button */}
+                <g
+                  className="cursor-pointer transition-all"
+                  onClick={() => console.log("Clicked arrow!")}
+                >
+                  {/* Transparent hit area */}
+                  <rect
+                    x="600"  // slightly beyond your path bounds
+                    y="15"
+                    width="80"
+                    height="60"
+                    fill="transparent"
+                  />
+
+                  {/* Actual visible shape */}
+                  <path
+                    d="M667 29.6981H661.72V41.1371H612.106L627.51 25.7332L623.777 22L602 43.7768L623.777 65.5536L627.51 61.8206L612.106 46.4166H667V29.6981Z"
+                    fill="#FFD700"
+                    className="transition-all group-hover:fill-yellow-300"
+                  />
+                </g>
+
+                <text
+                    x="5%"
+                    y="8%"
+                    textAnchor="start"
+                    dominantBaseline="middle"
+                    fill="var(--dark-blue)"
+                    fontSize="30"
+                    fontWeight="normal"
+                    fontFamily='furore'
+                    className="select-none"
+                  >
+                    Project Name
+                  </text>
+              </svg>
             </div>
           </div>
         </div>

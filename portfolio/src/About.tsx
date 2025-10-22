@@ -14,7 +14,7 @@ flex items-center justify-center py-8">
             <div></div>
             <div>
               <h1 className="font-furore font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl px-4 w-full flex
-              justify-center 3xl:justify-start">
+              justify-center 3xl:justify-start select-none">
                 {`> About me __`}
               </h1>
             </div>
