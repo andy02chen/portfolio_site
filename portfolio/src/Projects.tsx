@@ -27,18 +27,25 @@ export default function Projects() {
             </h1>
           </div>
 
-          <div className="flex flex-1 gap-8">
+          <div className="flex flex-row flex-1 gap-8">
             {/* Number Selector Div */}
             <div
               className={`flex flex-col justify-evenly items-center h-full font-furore text-2xl transition-all duration-500
-              ${projectSelected === null ? "w-full" : "w-[25%]"}`}
+              ${projectSelected === null ? "w-full" : "w-auto"}`}
             >
               <div
                 className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
                 ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent" }`}
                 onClick={() => changeProject(1)}
               >
-                01
+                <div className="flex items-center justify-between text-[var(--yellow)]">
+                  <h1 className={`${projectSelected === 1 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
+                    01
+                  </h1>
+                  <h1 className={`${projectSelected === null ? 'flex':'hidden'}`}>
+                    Project name
+                  </h1>
+                </div>
               </div>
               <div
                 className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
@@ -67,7 +74,7 @@ export default function Projects() {
             <div
               className={`transition-all duration-500 overflow-hidden flex items-center justify-center
                 ${projectSelected !== null 
-                  ? "w-[75%] max-h-full opacity-100 p-4" 
+                  ? "w-[80%] max-h-full opacity-100 p-4" 
                   : "w-0 opacity-0 p-0"
                 }`}
             >
