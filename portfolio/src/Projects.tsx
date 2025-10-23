@@ -31,42 +31,74 @@ export default function Projects() {
             {/* Number Selector Div */}
             <div
               className={`flex flex-col justify-evenly items-center h-full font-furore text-2xl transition-all duration-500
-              ${projectSelected === null ? "w-full" : "w-auto"}`}
+              ${projectSelected === null ? "w-full" : "w-[15%]"}`}
             >
               <div
-                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
-                ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent" }`}
+                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer select-none transition-all duration-300
+                ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }`}
                 onClick={() => changeProject(1)}
               >
-                <div className="flex items-center justify-between text-[var(--yellow)]">
-                  <h1 className={`${projectSelected === 1 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
+                <div className="flex items-center justify-between text-[var(--yellow)] transition-all duration-500">
+                  <h1 className={`transition-colors duration-300 ${projectSelected === 1 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
                     01
                   </h1>
-                  <h1 className={`${projectSelected === null ? 'flex':'hidden'}`}>
+                  <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap
+                    ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
+                  >
                     Project name
                   </h1>
                 </div>
               </div>
+              
               <div
-                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
-                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent" }`}
+                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer select-none transition-all duration-300
+                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }`}
                 onClick={() => changeProject(2)}
               >
-                02
+                <div className="flex items-center justify-between text-[var(--yellow)] transition-all duration-500">
+                  <h1 className={`transition-colors duration-300 ${projectSelected === 2 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
+                    02
+                  </h1>
+                  <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap
+                    ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
+                  >
+                    Another Project
+                  </h1>
+                </div>
               </div>
+              
               <div
-                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
-                ${projectSelected === 3 ? "bg-[var(--yellow)]" : "bg-transparent" }`}
+                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer select-none transition-all duration-300
+                ${projectSelected === 3 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }`}
                 onClick={() => changeProject(3)}
               >
-                03
+                <div className="flex items-center justify-between text-[var(--yellow)] transition-all duration-500">
+                  <h1 className={`transition-colors duration-300 ${projectSelected === 3 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
+                    03
+                  </h1>
+                  <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap
+                    ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
+                  >
+                    Third Project
+                  </h1>
+                </div>
               </div>
+              
               <div
-                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer
-                ${projectSelected === 4 ? "bg-[var(--yellow)]" : "bg-transparent" }`}
+                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer select-none transition-all duration-300
+                ${projectSelected === 4 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }`}
                 onClick={() => changeProject(4)}
               >
-                04
+                <div className="flex items-center justify-between text-[var(--yellow)] transition-all duration-500">
+                  <h1 className={`transition-colors duration-300 ${projectSelected === 4 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
+                    04
+                  </h1>
+                  <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap
+                    ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
+                  >
+                    Fourth Project
+                  </h1>
+                </div>
               </div>
             </div>
 
@@ -74,7 +106,7 @@ export default function Projects() {
             <div
               className={`transition-all duration-500 overflow-hidden flex items-center justify-center
                 ${projectSelected !== null 
-                  ? "w-[80%] max-h-full opacity-100 p-4" 
+                  ? "w-[85%] max-h-full opacity-100 p-4" 
                   : "w-0 opacity-0 p-0"
                 }`}
             >
