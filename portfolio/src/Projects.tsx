@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { normalizeModuleId } from "vite/module-runner";
 
 export default function Projects() {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
 
-  const changeProject = (numberClicked: number) => {
+  const changeProject = (numberClicked: number|null) => {
     if (numberClicked === projectSelected) {
       setProjectSelected(null);
     } else {
@@ -72,7 +73,7 @@ export default function Projects() {
             >
               <svg className="w-full h-auto" viewBox="0 0 675 588" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 90V0H566L613 90H0Z" fill="#FFD700"/>
-                <rect x="2" y="92" width="671" height="472" fill="#1F2937" stroke="#FFD700" stroke-width="4"/>
+                <rect x="2" y="92" width="671" height="472" fill="#1F2937" stroke="#FFD700" strokeWidth="4"/>
                 <rect x="271" y="109" width="379" height="20" fill="white"/>
                 <rect x="245" y="111" width="15" height="15" fill="white"/>
                 <path d="M31 543L82.2381 584.642H110.24L59.0022 543H31Z" fill="white" stroke="white"/>
@@ -82,7 +83,7 @@ export default function Projects() {
                 {/* Back Button */}
                 <g
                   className="cursor-pointer transition-all"
-                  onClick={() => console.log("Clicked arrow!")}
+                  onClick={() => changeProject(null)}
                 >
                   {/* Transparent hit area */}
                   <rect
@@ -102,18 +103,34 @@ export default function Projects() {
                 </g>
 
                 <text
-                    x="5%"
-                    y="8%"
-                    textAnchor="start"
-                    dominantBaseline="middle"
-                    fill="var(--dark-blue)"
-                    fontSize="30"
-                    fontWeight="normal"
-                    fontFamily='furore'
-                    className="select-none"
-                  >
-                    Project Name
-                  </text>
+                  x="5%"
+                  y="8%"
+                  textAnchor="start"
+                  dominantBaseline="middle"
+                  fill="var(--dark-blue)"
+                  fontSize="30"
+                  fontWeight="normal"
+                  fontFamily='furore'
+                  className="select-none"
+                >
+                  Project Name
+                </text>
+                
+                <foreignObject x="20" y="140" width="630" height="380">
+                  <div className="text-[var(--yellow)] text-sm font-['Ubuntu_Sans_Mono'] leading-relaxed p-2">
+                    <p className="mb-2">
+                      This is your first paragraph. It will wrap automatically and stay within the bounds.
+                    </p>
+                    <p className="mb-2">
+                      This is your second paragraph with more content that can span multiple lines.fdsafdsafsdafasdfdsafdsafdas
+                      fdsafsdafsd
+                    </p>
+                    <p>
+                      Add as many paragraphs as you need. You can also use regular HTML styling.
+                    </p>
+                  </div>
+                </foreignObject>
+
               </svg>
             </div>
           </div>
