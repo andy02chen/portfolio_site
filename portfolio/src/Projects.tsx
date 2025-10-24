@@ -1,10 +1,5 @@
 import { useState } from "react";
 
-// TODO Add indicator like an arrow for selected project when description is shown
-// TODO Add animation when hover on already selected project
-// TODO add animation and indicator for other divs
-
-
 export default function Projects() {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
 
@@ -114,7 +109,11 @@ export default function Projects() {
                   : "w-0 opacity-0 p-0"
                 }`}
             >
-              <svg className="w-full h-auto" viewBox="0 0 675 588" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg 
+                key={projectSelected}
+                className="w-full h-auto animate-scaleIn" 
+                viewBox="0 0 675 588"
+              >
                 <path d="M0 93V0H566L613 93H0Z" fill="#FFD700"/>
                 <rect x="2" y="92" width="671" height="472" fill="#1F2937" stroke="#FFD700" stroke-width="4"/>
                 <rect x="271" y="109" width="379" height="20" fill="white"/>
