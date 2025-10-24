@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { normalizeModuleId } from "vite/module-runner";
+
+// TODO Add indicator like an arrow for selected project when description is shown
+// TODO Add animation when hover on already selected project
+// TODO add animation and indicator for other divs
+
 
 export default function Projects() {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
@@ -111,8 +115,8 @@ export default function Projects() {
                 }`}
             >
               <svg className="w-full h-auto" viewBox="0 0 675 588" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 90V0H566L613 90H0Z" fill="#FFD700"/>
-                <rect x="2" y="92" width="671" height="472" fill="#1F2937" stroke="#FFD700" strokeWidth="4"/>
+                <path d="M0 93V0H566L613 93H0Z" fill="#FFD700"/>
+                <rect x="2" y="92" width="671" height="472" fill="#1F2937" stroke="#FFD700" stroke-width="4"/>
                 <rect x="271" y="109" width="379" height="20" fill="white"/>
                 <rect x="245" y="111" width="15" height="15" fill="white"/>
                 <path d="M31 543L82.2381 584.642H110.24L59.0022 543H31Z" fill="white" stroke="white"/>
