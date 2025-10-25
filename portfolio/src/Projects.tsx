@@ -32,7 +32,7 @@ export default function Projects() {
             <div
               className={`flex flex-col justify-evenly items-center min-h-[200px] xl:max-h-full h-full 
                 font-furore text-2xl transition-all duration-500 overflow-y-scroll gap-8
-              ${projectSelected === null ? "w-full" : "w-24"}`}
+                w-full ${projectSelected === null ? "xl:w-full" : "xl:w-24"}`}
             >
               <div
                 className={`h-24 items-center border border-[var(--yellow)] 
