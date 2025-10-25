@@ -5,15 +5,15 @@ export default function About() {
   return(
     <section id="about_me" className="w-full h-[calc(100vh-73px)] lg:h-[calc(100vh-64px)]
 flex items-center justify-center py-8">
-      <div className="w-[85vw] h-[85vh] bg-[var(--light-blue)] border-1 border-[var(--yellow)]
+      <div className="w-[85vw] max-h-[85vh] bg-[var(--light-blue)] border-1 border-[var(--yellow)]
       flex flex-col gap-4 3xl:gap-0">
 
         {/* Top Div */}
         <div className='w-full h-auto'>
           <div className="grid grid-cols-[1rem_auto_1rem] sm:grid-cols-[4rem_auto_4rem] justify-stretch">
             <div></div>
-            <div>
-              <h1 className="font-furore font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl px-4 w-full flex
+            <div className='overflow-hidden'>
+              <h1 className="font-furore font-bold text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl px-4 w-full flex
               justify-center 3xl:justify-start select-none">
                 {`> About me __`}
               </h1>
@@ -23,13 +23,13 @@ flex items-center justify-center py-8">
         </div>
 
         {/* Bottom Div */}
-        <div className='flex flex-col 3xl:flex-row w-full h-full overflow-y-auto'>
+        <div className="flex flex-col 2xl:flex-row w-full flex-1 overflow-y-auto">
 
           {/* Left Div */}
-          <div className="flex-1 3xl:flex-auto flex flex-col">
+          <div className="flex-1 2xl:flex-auto flex flex-col">
             
             <div className="flex h-full items-center justify-center">
-              <svg className='w-3/4 3xl:w-8/10 h-auto' viewBox="0 0 1101 664" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className='w-3/4 2xl:w-8/10 h-auto' viewBox="0 0 1101 664" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <clipPath id="aboutMeClip">
                     <rect x="78.5" y="25.5" width="1021" height="575" stroke="#FFD700" strokeWidth="3"/>
@@ -55,8 +55,8 @@ flex items-center justify-center py-8">
 
           {/* Right Div */}
           <div className="flex-1 h-auto flex justify-center items-center">
-            <div className='bg-[var(--dark-blue)] h-auto w-9/10 p-4 max-h-[60vh] overflow-y-auto'>
-              <p className='font-ubuntu text-sm xl:text-lg 2xl:text-xl 3xl:text-2xl'>
+            <div className='bg-[var(--dark-blue)] h-auto w-9/10 p-4 max-h-[80vh] overflow-y-auto'>
+              <p className='font-ubuntu text-sm lg:text-lg 2xl:text-lg 3xl:text-2xl'>
                 Hi, I'm <span className='font-bold text-[var(--yellow)]'>Andy Chen</span>, a Bachelor of Computing graduate 
                 from the <span className='font-bold text-[var(--yellow)]'>University of Sydney</span>, majoring in Computer Science.
                 <br/><br/>

@@ -34,23 +34,58 @@ export default function Projects() {
               ${projectSelected === null ? "w-full" : "w-24"}`}
             >
               <div
-                className={`h-24 border border-[var(--yellow)] w-full cursor-pointer select-none transition-all duration-300
-                ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }
-                ${projectSelected === null ? '' : 'flex justify-center'}
-                p-4 2xl:p-4 3xl:p-8`}
+                className={`h-24 items-center border border-[var(--yellow)] 
+                  w-full cursor-pointer select-none transition-all duration-300
+                  ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}
+                  flex ${projectSelected === 1 ? 'justify-center' : 'justify-between'}
+                  p-4 2xl:p-4 3xl:p-8`}
                 onClick={() => changeProject(1)}
               >
-                <div className="flex items-center justify-between text-[var(--yellow)] transition-all duration-500">
-                  <h1 className={`transition-colors duration-300
-                    ${projectSelected === 1 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
-                    01
-                  </h1>
-                  <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap
-                    ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
-                  >
-                    Project name
-                  </h1>
-                </div>
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 1 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
+                  01
+                </h1>
+                <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap text-[var(--yellow)]
+                  ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
+                >
+                  Project name
+                </h1>
+              </div>
+              <div
+                className={`h-24 items-center border border-[var(--yellow)] 
+                  w-full cursor-pointer select-none transition-all duration-300
+                  ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}
+                  flex ${projectSelected === 1 ? 'justify-center' : 'justify-between'}
+                  p-4 2xl:p-4 3xl:p-8`}
+                onClick={() => changeProject(1)}
+              >
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 1 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
+                  01
+                </h1>
+                <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap text-[var(--yellow)]
+                  ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
+                >
+                  Project name
+                </h1>
+              </div>
+              <div
+                className={`h-24 items-center border border-[var(--yellow)] 
+                  w-full cursor-pointer select-none transition-all duration-300
+                  ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}
+                  flex ${projectSelected === 1 ? 'justify-center' : 'justify-between'}
+                  p-4 2xl:p-4 3xl:p-8`}
+                onClick={() => changeProject(1)}
+              >
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 1 ? 'text-[var(--dark-blue)]' : 'text-[var(--yellow)]'}`}>
+                  01
+                </h1>
+                <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap text-[var(--yellow)]
+                  ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
+                >
+                  Project name
+                </h1>
               </div>
             </div>
 
