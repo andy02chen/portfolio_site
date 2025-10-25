@@ -14,27 +14,29 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)] flex items-center justify-center"
+      className="w-full h-[calc(100vh-73px)] lg:h-[calc(100vh-64px)] flex items-center justify-center"
     >
       <div className="w-[85vw] h-[85vh] flex">
         {/* Left Div */}
-        <div className="w-[50%] h-full flex flex-col">
-          <div>
+        <div className="w-[50%] h-full flex flex-col gap-4">
+          <div className="h-20">
             <h1 className="font-furore font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl
             select-none">
               \\ Pr()jects __
             </h1>
           </div>
 
-          <div className="flex flex-row flex-1 gap-8">
+          <div className="flex flex-row flex-1
+          gap-4 3xl:gap-8">
             {/* Number Selector Div */}
             <div
               className={`flex flex-col justify-evenly items-center h-full font-furore text-2xl transition-all duration-500
-              ${projectSelected === null ? "w-full" : "w-[15%]"}`}
+              ${projectSelected === null ? "w-full" : "w-24"}`}
             >
               <div
-                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer select-none transition-all duration-300
-                ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }`}
+                className={`h-24 border border-[var(--yellow)] w-full cursor-pointer select-none transition-all duration-300
+                ${projectSelected === 1 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }
+                p-4 2xl:p-4 3xl:p-8`}
                 onClick={() => changeProject(1)}
               >
                 <div className="flex items-center justify-between text-[var(--yellow)] transition-all duration-500">
@@ -50,8 +52,9 @@ export default function Projects() {
               </div>
               
               <div
-                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer select-none transition-all duration-300
-                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }`}
+                className={`border border-[var(--yellow)] w-full cursor-pointer select-none transition-all duration-300
+                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }
+                p-4 2xl:p-4 3xl:p-8`}
                 onClick={() => changeProject(2)}
               >
                 <div className="flex items-center justify-between text-[var(--yellow)] transition-all duration-500">
@@ -61,14 +64,15 @@ export default function Projects() {
                   <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap
                     ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
                   >
-                    Another Project
+                    Project name
                   </h1>
                 </div>
               </div>
-              
+
               <div
-                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer select-none transition-all duration-300
-                ${projectSelected === 3 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }`}
+                className={`border border-[var(--yellow)] w-full cursor-pointer select-none transition-all duration-300
+                ${projectSelected === 3 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }
+                p-4 2xl:p-4 3xl:p-8`}
                 onClick={() => changeProject(3)}
               >
                 <div className="flex items-center justify-between text-[var(--yellow)] transition-all duration-500">
@@ -78,14 +82,15 @@ export default function Projects() {
                   <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap
                     ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
                   >
-                    Third Project
+                    Project name
                   </h1>
                 </div>
               </div>
-              
+
               <div
-                className={`border border-[var(--yellow)] p-10 w-full cursor-pointer select-none transition-all duration-300
-                ${projectSelected === 4 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }`}
+                className={`border border-[var(--yellow)] w-full cursor-pointer select-none transition-all duration-300
+                ${projectSelected === 4 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10" }
+                p-4 2xl:p-4 3xl:p-8`}
                 onClick={() => changeProject(4)}
               >
                 <div className="flex items-center justify-between text-[var(--yellow)] transition-all duration-500">
@@ -95,7 +100,7 @@ export default function Projects() {
                   <h1 className={`transition-all duration-500 overflow-hidden whitespace-nowrap
                     ${projectSelected === null ? 'max-w-[500px] opacity-100' : 'max-w-0 opacity-0'}`}
                   >
-                    Fourth Project
+                    Project name
                   </h1>
                 </div>
               </div>
@@ -103,7 +108,7 @@ export default function Projects() {
 
             {/* Description Div */}
             <div
-              className={`transition-all duration-500 overflow-hidden flex items-center justify-center
+              className={`transition-all max-h-full duration-500 flex items-center justify-center mx-auto
                 ${projectSelected !== null 
                   ? "w-[85%] max-h-full opacity-100 p-4" 
                   : "w-0 opacity-0 p-0"
@@ -111,11 +116,12 @@ export default function Projects() {
             >
               <svg 
                 key={projectSelected}
-                className="w-full h-auto animate-scaleIn" 
+                className="w-full h-full max-h-full object-contain animate-scaleIn"
                 viewBox="0 0 675 588"
+                preserveAspectRatio="xMidYMid meet"
               >
                 <path d="M0 93V0H566L613 93H0Z" fill="#FFD700"/>
-                <rect x="2" y="92" width="671" height="472" fill="#1F2937" stroke="#FFD700" stroke-width="4"/>
+                <rect x="2" y="92" width="671" height="472" fill="#1F2937" stroke="#FFD700" strokeWidth="4"/>
                 <rect x="271" y="109" width="379" height="20" fill="white"/>
                 <rect x="245" y="111" width="15" height="15" fill="white"/>
                 <path d="M31 543L82.2381 584.642H110.24L59.0022 543H31Z" fill="white" stroke="white"/>

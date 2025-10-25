@@ -3,7 +3,7 @@ import background_img from './assets/about_me_background.jpg';
 
 export default function About() {
   return(
-    <section id="about_me" className="w-full min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-64px)]
+    <section id="about_me" className="w-full h-[calc(100vh-73px)] lg:h-[calc(100vh-64px)]
 flex items-center justify-center py-8">
       <div className="w-[85vw] h-[85vh] bg-[var(--light-blue)] border-1 border-[var(--yellow)]
       flex flex-col gap-4 3xl:gap-0">
