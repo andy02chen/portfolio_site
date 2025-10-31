@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 // TODO Fix scroll bar on projects
-// TODO mobile project name div
+
+// TODO desktop project name flashes briefly when backout from selection
 
 export default function Projects() {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
@@ -33,9 +34,16 @@ export default function Projects() {
           gap-4 3xl:gap-8 max-h-full overflow-hidden">
             {/* Number Selector Div */}
             <div
-              className={`flex flex-col justify-evenly items-center min-h-[200px] xl:max-h-full h-full 
-                font-furore text-2xl transition-all duration-500 overflow-y-scroll gap-6 xl:gap-8
-                w-full ${projectSelected === null ? "xl:w-full" : "xl:w-24"}`}
+              className={`
+                flex flex-col justify-evenly items-center
+                min-h-[200px] xl:max-h-full h-full
+                font-furore text-2xl transition-all duration-500
+                overflow-y-scroll overflow-x-hidden
+                gap-6 xl:gap-8
+                w-full
+                ${projectSelected === null ? "xl:w-full" : "xl:w-24"}
+                xl:max-w-full
+              `}
             >
               <div className={`h-24 border border-[var(--yellow)] flex justify-between items-center w-full cursor-pointer select-none
                 transition-all duration-300 p-4 xl:p-8 3xl:p-8 text-[var(--yellow)]
