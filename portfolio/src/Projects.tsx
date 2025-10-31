@@ -2,8 +2,6 @@ import { useState } from "react";
 
 // TODO Fix scroll bar on projects
 
-// TODO desktop project name flashes briefly when backout from selection
-
 export default function Projects() {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
 
@@ -38,7 +36,8 @@ export default function Projects() {
                 flex flex-col justify-evenly items-center
                 min-h-[200px] xl:max-h-full h-full
                 font-furore text-2xl transition-all duration-500
-                overflow-y-scroll overflow-x-hidden
+                overflow-y-auto overflow-x-hidden
+                scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-transparent
                 gap-6 xl:gap-8
                 w-full
                 ${projectSelected === null ? "xl:w-full" : "xl:w-24"}
@@ -54,7 +53,7 @@ export default function Projects() {
                   `}>
                   01
                 </h1>
-                <h1 className={`transition-colors duration-300 ext-[var(--yellow)]
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
                   ${projectSelected === 1 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -71,7 +70,88 @@ export default function Projects() {
                   `}>
                   02
                 </h1>
-                <h1 className={`transition-colors duration-300 ext-[var(--yellow)]
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
+                  xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
+                  `}>
+                  Project Name
+                </h1>
+              </div>
+
+              <div className={`h-24 border border-[var(--yellow)] flex justify-between items-center w-full cursor-pointer select-none
+                transition-all duration-300 p-4 xl:p-8 3xl:p-8 text-[var(--yellow)]
+                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}`}
+                onClick={() => changeProject(2)}>
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)]" : ""}
+                  `}>
+                  02
+                </h1>
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
+                  xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
+                  `}>
+                  Project Name
+                </h1>
+              </div>
+              <div className={`h-24 border border-[var(--yellow)] flex justify-between items-center w-full cursor-pointer select-none
+                transition-all duration-300 p-4 xl:p-8 3xl:p-8 text-[var(--yellow)]
+                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}`}
+                onClick={() => changeProject(2)}>
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)]" : ""}
+                  `}>
+                  02
+                </h1>
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
+                  xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
+                  `}>
+                  Project Name
+                </h1>
+              </div>
+              <div className={`h-24 border border-[var(--yellow)] flex justify-between items-center w-full cursor-pointer select-none
+                transition-all duration-300 p-4 xl:p-8 3xl:p-8 text-[var(--yellow)]
+                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}`}
+                onClick={() => changeProject(2)}>
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)]" : ""}
+                  `}>
+                  02
+                </h1>
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
+                  xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
+                  `}>
+                  Project Name
+                </h1>
+              </div>
+              <div className={`h-24 border border-[var(--yellow)] flex justify-between items-center w-full cursor-pointer select-none
+                transition-all duration-300 p-4 xl:p-8 3xl:p-8 text-[var(--yellow)]
+                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}`}
+                onClick={() => changeProject(2)}>
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)]" : ""}
+                  `}>
+                  02
+                </h1>
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
+                  xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
+                  `}>
+                  Project Name
+                </h1>
+              </div>
+              <div className={`h-24 border border-[var(--yellow)] flex justify-between items-center w-full cursor-pointer select-none
+                transition-all duration-300 p-4 xl:p-8 3xl:p-8 text-[var(--yellow)]
+                ${projectSelected === 2 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}`}
+                onClick={() => changeProject(2)}>
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 2 ? "text-[var(--dark-blue)]" : ""}
+                  `}>
+                  02
+                </h1>
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
                   ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -88,7 +168,7 @@ export default function Projects() {
                   `}>
                   03
                 </h1>
-                <h1 className={`transition-colors duration-300 ext-[var(--yellow)]
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
                   ${projectSelected === 3 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -103,13 +183,48 @@ export default function Projects() {
                   `}>
                   04
                 </h1>
-                <h1 className={`transition-colors duration-300 ext-[var(--yellow)]
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
                   ${projectSelected === 4 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
                   Project Name
                 </h1>
               </div>
+
+              <div className={`h-24 border border-[var(--yellow)] flex justify-between items-center w-full cursor-pointer select-none
+                transition-all duration-300 p-4 xl:p-8 3xl:p-8 text-[var(--yellow)]
+                ${projectSelected === 5 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}`}
+                onClick={() => changeProject(5)}>
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 5 ? "text-[var(--dark-blue)]" : ""}
+                  `}>
+                  05
+                </h1>
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                  ${projectSelected === 5 ? "text-[var(--dark-blue)] opacity-100" : ""}
+                  xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
+                  `}>
+                  Project Name
+                </h1>
+              </div>
+
+              <div className={`h-24 border border-[var(--yellow)] flex justify-between items-center w-full cursor-pointer select-none
+                transition-all duration-300 p-4 xl:p-8 3xl:p-8 text-[var(--yellow)]
+                ${projectSelected === 6 ? "bg-[var(--yellow)]" : "bg-transparent hover:bg-[var(--yellow)]/10"}`}
+                onClick={() => changeProject(6)}>
+                <h1 className={`transition-colors duration-300
+                  ${projectSelected === 6 ? "text-[var(--dark-blue)]" : ""}
+                  `}>
+                  06
+                </h1>
+                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                  ${projectSelected === 6 ? "text-[var(--dark-blue)] opacity-100" : ""}
+                  xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
+                  `}>
+                  Project Name
+                </h1>
+              </div>
+
             </div>
 
             {/* Description Div */}

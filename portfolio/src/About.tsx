@@ -23,7 +23,8 @@ flex items-center justify-center py-8">
         </div>
 
         {/* Bottom Div */}
-        <div className="flex flex-col 2xl:flex-row w-full flex-1 overflow-y-auto">
+        <div className="flex flex-col 2xl:flex-row w-full flex-1 overflow-y-auto
+        scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-transparent">
 
           {/* Left Div */}
           <div className="flex-1 2xl:flex-auto flex flex-col">
@@ -55,7 +56,8 @@ flex items-center justify-center py-8">
 
           {/* Right Div */}
           <div className="flex-1 h-auto flex justify-center items-center">
-            <div className='bg-[var(--dark-blue)] h-auto w-9/10 p-4 max-h-[80vh] overflow-y-auto'>
+            <div className='bg-[var(--dark-blue)] h-auto w-9/10 p-4 max-h-[80vh] overflow-y-auto
+            scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-transparent'>
               <p className='font-ubuntu text-sm lg:text-lg 2xl:text-lg 3xl:text-2xl'>
                 Hi, I'm <span className='font-bold text-[var(--yellow)]'>Andy Chen</span>, a Bachelor of Computing graduate 
                 from the <span className='font-bold text-[var(--yellow)]'>University of Sydney</span>, majoring in Computer Science.
