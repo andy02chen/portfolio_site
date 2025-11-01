@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-// TODO Fix scroll bar on projects
+// fix scrollbar thing pushing div over
 
 export default function Projects() {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
@@ -29,7 +29,8 @@ export default function Projects() {
           </div>
 
           <div className="flex flex-col xl:flex-row flex-1
-          gap-4 3xl:gap-8 max-h-full overflow-hidden">
+          gap-4 3xl:gap-8 max-h-full overflow-hidden 
+          ">
             {/* Number Selector Div */}
             <div
               className={`
@@ -38,11 +39,13 @@ export default function Projects() {
                 font-furore text-2xl transition-all duration-500
                 overflow-y-auto overflow-x-hidden
                 scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-transparent
+                scrollbar-stable-gutter
                 gap-6 xl:gap-8
                 w-full
-                ${projectSelected === null ? "xl:w-full" : "xl:w-24"}
+                ${projectSelected === null ? "xl:w-full" : "xl:w-auto"}
                 xl:max-w-full
               `}
+              style={{ scrollbarGutter: 'stable' }}
             >
               <div className={`h-24 border border-[var(--yellow)] flex justify-between items-center w-full cursor-pointer select-none
                 transition-all duration-300 p-4 xl:p-8 3xl:p-8 text-[var(--yellow)]
