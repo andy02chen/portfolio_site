@@ -353,13 +353,37 @@ export default function Projects() {
                 </text>
                 
                 <foreignObject x="20" y="140" width="630" height="380">
-                  <div className="text-[var(--yellow)] text-sm font-['Ubuntu_Sans_Mono'] leading-relaxed p-2">
+                  <div className="text-[var(--yellow)] text-md xl:text-sm font-['Ubuntu_Sans_Mono']
+                  leading-relaxed p-2 overflow-y-auto h-full
+                  scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-transparent
+                  scrollbar-stable-gutter">
                     <p className="mb-2">
-                      This is your first paragraph. It will wrap automatically and stay within the bounds.
+                      This is your first paragraph. It will wrap automatically and stay within the bounds. s
                     </p>
                     <p className="mb-2">
                       This is your second paragraph with more content that can span multiple lines.fdsafdsafsdafasdfdsafdsafdas
                       fdsafsdafsd
+                    </p>
+                    <p>
+                      Add as many paragraphs as you need. You can also use regular HTML styling.
+                    </p>
+                    <p>
+                      Add as many paragraphs as you need. You can also use regular HTML styling.
+                    </p>
+                    <p>
+                      Add as many paragraphs as you need. You can also use regular HTML styling.
+                    </p>
+                    <p>
+                      Add as many paragraphs as you need. You can also use regular HTML styling.
+                    </p>
+                    <p>
+                      Add as many paragraphs as you need. You can also use regular HTML styling.
+                    </p>
+                    <p>
+                      Add as many paragraphs as you need. You can also use regular HTML styling.
+                    </p>
+                    <p>
+                      Add as many paragraphs as you need. You can also use regular HTML styling.
                     </p>
                     <p>
                       Add as many paragraphs as you need. You can also use regular HTML styling.
