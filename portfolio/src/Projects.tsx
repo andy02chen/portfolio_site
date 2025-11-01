@@ -285,6 +285,14 @@ export default function Projects() {
             </div>
 
             {/* Description Div */}
+            <div className={`xl:hidden
+              ${projectSelected === null && textOrImage === 'text' ? 'flex flex-1 items-center justify-center' : 'hidden'}
+              `}>
+              <h1 className="font-furore text-4xl">
+                [ Select a Project]
+              </h1>
+            </div>
+
             <div
               className={`transition-all h-[50%] xl:h-full duration-500 flex-1 xl:flex items-center justify-center mx-auto
                 ${projectSelected !== null 
@@ -366,9 +374,16 @@ export default function Projects() {
 
         {/* Right Div */}
         <div className={`w-full xl:w-[50%] 
-        transition-all h-[50%] xl:h-full duration-500 flex-1 xl:flex items-center justify-center mx-auto
+          transition-all h-[50%] xl:h-full duration-500 flex-1 xl:flex items-center justify-center mx-auto
           ${textOrImage === 'image'? 'flex' : 'hidden'} xl:flex`}>
-          <h1 className="font-furore text-4xl">
+          <h1 className={`font-furore text-4xl
+            ${projectSelected !== null ? 'flex' : 'hidden'}
+            `}>
+            [ insert image ]
+          </h1>
+          <h1 className={`font-furore text-4xl
+            ${projectSelected === null ? 'flex' : 'hidden'}
+            `}>
             [ Select a Project]
           </h1>
         </div>
