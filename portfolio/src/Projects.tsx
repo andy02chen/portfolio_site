@@ -5,6 +5,8 @@ import { useState } from "react";
 export default function Projects() {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
 
+  const [textOrImage, setTextOrImage] = useState<string>('text');
+
   const changeProject = (numberClicked: number|null) => {
     if (numberClicked === projectSelected) {
       setProjectSelected(null);
@@ -20,27 +22,74 @@ export default function Projects() {
     >
       <div className="w-[85vw] h-[85vh] flex flex-col xl:flex-row">
         {/* Left Div */}
-        <div className="w-full xl:w-[50%] h-full flex flex-col gap-4">
-          <div className="h-20">
+        <div className="w-full xl:w-[50%] h- xl:h-full flex flex-col gap-4">
+          <div className="h-auto">
             <h1 className="font-furore font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl
             select-none">
               \\ Pr()jects __
             </h1>
           </div>
 
+          <div className="xl:hidden flex gap-4">
+            <button
+              className="relative px-6 py-3 border-2 border-[var(--yellow)] text-[var(--yellow)]
+                        transform -skew-x-12 hover:bg-[var(--yellow)] hover:text-[var(--dark-blue)]
+                        transition-all duration-300"
+            onClick={() => setTextOrImage('text')}>
+              <span className="block transform skew-x-12 h-5">
+                <svg
+                viewBox="0 0 372 372"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-full"
+              >
+                <rect width="372" height="372" fill="#1F2937" />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M348.75 23.25H23.25V348.75H348.75V23.25ZM69.75 69.75V162.75H116.25V116.25H162.75V255.75H116.25V302.25H255.75V255.75H209.25V116.25H255.75V162.75H302.25V69.75H69.75Z"
+                  fill="#FFD700"
+                />
+              </svg>
+              </span>
+            </button>
+
+            <button
+              className="relative px-6 py-3 border-2 border-[var(--yellow)] text-[var(--yellow)]
+                        transform -skew-x-12 hover:bg-[var(--yellow)] hover:text-[var(--dark-blue)]
+                        transition-all duration-300"
+            onClick={() => setTextOrImage('image')}>
+              <span className="block transform skew-x-12 h-5">
+                <svg
+                viewBox="0 0 800 800"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-full"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M50 50H750V750H50V50ZM300 450L400 550L650 300V650H150V600L300 450ZM325 350C366.421 350 400 316.421 400 275C400 233.579 366.421 200 325 200C283.579 200 250 233.579 250 275C250 316.421 283.579 350 325 350Z"
+                    fill="#FFD700"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+
           <div className="flex flex-col xl:flex-row flex-1
-          gap-4 3xl:gap-8 max-h-full overflow-hidden 
+          gap-4 3xl:gap-8 xl:max-h-full overflow-hidden 
           ">
             {/* Number Selector Div */}
             <div
               className={`
                 flex flex-col justify-evenly items-center
-                min-h-[200px] xl:max-h-full h-full
+                h-[200px] xl:h-full
                 font-furore text-2xl transition-all duration-500
                 overflow-y-auto overflow-x-hidden
                 scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-transparent
                 scrollbar-stable-gutter
-                gap-6 xl:gap-8
+                xl:gap-8
                 w-full
                 ${projectSelected === null ? "xl:w-full" : "xl:w-auto"}
                 xl:max-w-full
@@ -232,11 +281,13 @@ export default function Projects() {
 
             {/* Description Div */}
             <div
-              className={`transition-all max-h-full duration-500 flex items-center justify-center mx-auto
+              className={`transition-all h-[50%] xl:h-full duration-500 flex-1 xl:flex items-center justify-center mx-auto
                 ${projectSelected !== null 
-                  ? "w-[85%] max-h-full opacity-100 p-4" 
-                  : "w-0 opacity-0 p-0"
-                }`}
+                  ? "w-full xl:w-[85%] max-h-full opacity-100 p-4" 
+                  : "w-0 opacity-0 p-0 max-h-0"
+                }
+                ${textOrImage === 'text'? 'flex' : 'hidden'}
+                `}
             >
               <svg 
                 key={projectSelected}
@@ -309,7 +360,11 @@ export default function Projects() {
         </div>
 
         {/* Right Div */}
-        <div className="bg-red-950 w-full xl:w-[50%] h-full">Images</div>
+        <div className={`bg-red-950 w-full xl:w-[50%] h-full
+        transition-all h-[50%] xl:h-full duration-500 flex-1 xl:flex items-center justify-center mx-auto
+          ${textOrImage === 'image'? 'flex' : 'hidden'} xl:flex`}>
+          Images
+        </div>
       </div>
     </section>
   );
