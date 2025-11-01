@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-// fix scrollbar thing pushing div over
+// TODO mobile text or image selected
+// TODO when no project is selected maybe default to 1
 
 export default function Projects() {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
 
-  const [textOrImage, setTextOrImage] = useState<string>('text');
+  const [textOrImage, setTextOrImage] = useState<string>('image');
 
   const changeProject = (numberClicked: number|null) => {
     if (numberClicked === projectSelected) {
@@ -22,7 +23,9 @@ export default function Projects() {
     >
       <div className="w-[85vw] h-[85vh] flex flex-col xl:flex-row">
         {/* Left Div */}
-        <div className="w-full xl:w-[50%] h- xl:h-full flex flex-col gap-4">
+        <div className={`w-full xl:w-[50%] xl:h-full flex flex-col gap-4
+          ${textOrImage === 'image' ? "h-auto" : "h-full"}
+          `}>
           <div className="h-auto">
             <h1 className="font-furore font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl
             select-none">
@@ -32,9 +35,10 @@ export default function Projects() {
 
           <div className="xl:hidden flex gap-4">
             <button
-              className="relative px-6 py-3 border-2 border-[var(--yellow)] text-[var(--yellow)]
+              className={`relative px-6 py-3 border-2 border-[var(--yellow)] text-[var(--yellow)]
                         transform -skew-x-12 hover:bg-[var(--yellow)] hover:text-[var(--dark-blue)]
-                        transition-all duration-300"
+                        transition-all duration-300
+                        ${textOrImage === 'text' ? "bg-[var(--yellow)]" : ""}`}
             onClick={() => setTextOrImage('text')}>
               <span className="block transform skew-x-12 h-5">
                 <svg
@@ -43,21 +47,22 @@ export default function Projects() {
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-full h-full"
               >
-                <rect width="372" height="372" fill="#1F2937" />
+                <rect width="372" height="372" fill={`${textOrImage === 'text' ? "var(--dark-blue)" : "var(--yellow)"}`} />
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
                   d="M348.75 23.25H23.25V348.75H348.75V23.25ZM69.75 69.75V162.75H116.25V116.25H162.75V255.75H116.25V302.25H255.75V255.75H209.25V116.25H255.75V162.75H302.25V69.75H69.75Z"
-                  fill="#FFD700"
+                  fill={`${textOrImage === 'text' ? "var(--yellow)" : "var(--dark-blue)"}`}
                 />
               </svg>
               </span>
             </button>
 
             <button
-              className="relative px-6 py-3 border-2 border-[var(--yellow)] text-[var(--yellow)]
+              className={`relative px-6 py-3 border-2 border-[var(--yellow)] text-[var(--yellow)]
                         transform -skew-x-12 hover:bg-[var(--yellow)] hover:text-[var(--dark-blue)]
-                        transition-all duration-300"
+                        transition-all duration-300
+              ${textOrImage === 'image' ? "bg-[var(--yellow)]" : ""}`}
             onClick={() => setTextOrImage('image')}>
               <span className="block transform skew-x-12 h-5">
                 <svg
@@ -70,7 +75,7 @@ export default function Projects() {
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M50 50H750V750H50V50ZM300 450L400 550L650 300V650H150V600L300 450ZM325 350C366.421 350 400 316.421 400 275C400 233.579 366.421 200 325 200C283.579 200 250 233.579 250 275C250 316.421 283.579 350 325 350Z"
-                    fill="#FFD700"
+                    fill={`${textOrImage === 'image' ? "var(--dark-blue)" : "var(--yellow)"}`}
                   />
                 </svg>
               </span>
@@ -105,7 +110,7 @@ export default function Projects() {
                   `}>
                   01
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 1 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -122,7 +127,7 @@ export default function Projects() {
                   `}>
                   02
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -139,7 +144,7 @@ export default function Projects() {
                   `}>
                   02
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -155,7 +160,7 @@ export default function Projects() {
                   `}>
                   02
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -171,7 +176,7 @@ export default function Projects() {
                   `}>
                   02
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -187,7 +192,7 @@ export default function Projects() {
                   `}>
                   02
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -203,7 +208,7 @@ export default function Projects() {
                   `}>
                   02
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 2 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -220,7 +225,7 @@ export default function Projects() {
                   `}>
                   03
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 3 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -235,7 +240,7 @@ export default function Projects() {
                   `}>
                   04
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 4 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -252,7 +257,7 @@ export default function Projects() {
                   `}>
                   05
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 5 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -269,7 +274,7 @@ export default function Projects() {
                   `}>
                   06
                 </h1>
-                <h1 className={`transition-colors duration-300 text-[var(--yellow)]
+                <h1 className={`transition-colors duration-300
                   ${projectSelected === 6 ? "text-[var(--dark-blue)] opacity-100" : ""}
                   xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                   `}>
@@ -360,10 +365,12 @@ export default function Projects() {
         </div>
 
         {/* Right Div */}
-        <div className={`bg-red-950 w-full xl:w-[50%] h-full
+        <div className={`w-full xl:w-[50%] 
         transition-all h-[50%] xl:h-full duration-500 flex-1 xl:flex items-center justify-center mx-auto
           ${textOrImage === 'image'? 'flex' : 'hidden'} xl:flex`}>
-          Images
+          <h1 className="font-furore text-4xl">
+            [ Select a Project]
+          </h1>
         </div>
       </div>
     </section>
