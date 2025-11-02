@@ -85,11 +85,11 @@ const projects = [
   },
 ]
 
-type HomeProps = {
+type SectionProps = {
   setNav: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export default function Projects({ setNav }: HomeProps) {
+export default function Projects({ setNav }: SectionProps) {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
 
   const [textOrImage, setTextOrImage] = useState<string>('image');

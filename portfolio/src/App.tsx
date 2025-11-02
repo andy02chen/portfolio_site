@@ -2,6 +2,7 @@ import { useState, type SetStateAction } from "react";
 import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 function App() {
 
@@ -278,6 +279,9 @@ function App() {
 
       {/* Projects */}
       <Projects setNav={setNav} />
+
+      {/* Contact */}
+      <Contact setNav={setNav} />
     </main>
   )
 }
