@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import proj1 from './assets/projects/proj1.png';
 import proj1_1 from './assets/projects/proj1_1.png';
@@ -85,7 +85,11 @@ const projects = [
   },
 ]
 
-export default function Projects() {
+type HomeProps = {
+  setNav: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export default function Projects({ setNav }: HomeProps) {
   const [projectSelected, setProjectSelected] = useState<number | null>(null);
 
   const [textOrImage, setTextOrImage] = useState<string>('image');
@@ -97,6 +101,22 @@ export default function Projects() {
       setProjectSelected(numberClicked);
     }
   };
+
+  const ref = useRef<HTMLDivElement>(null);
+    
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setNav('projects');
+        },
+        { threshold: 0.5 } // 50% visible
+      );
+  
+      if (ref.current) observer.observe(ref.current);
+      return () => {
+        if (ref.current) observer.unobserve(ref.current);
+      };
+    }, [setNav]);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -120,6 +140,7 @@ export default function Projects() {
 
   return (
     <section
+      ref={ref}
       id="projects"
       className="w-full h-[calc(100vh-73px)] lg:h-[calc(100vh-64px)] flex items-center justify-center"
     >

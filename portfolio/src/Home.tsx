@@ -1,6 +1,7 @@
 
 import pfp from './assets/pic.jpg';
 import resume from './assets/Andy Chen Resume.pdf';
+import { useEffect, useRef } from 'react';
 
 type HomeProps = {
   setNav: React.Dispatch<React.SetStateAction<string>>;
@@ -8,8 +9,24 @@ type HomeProps = {
 
 export default function Home({ setNav }: HomeProps) {
 
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setNav('home');
+      },
+      { threshold: 0.5 } // 50% visible
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, [setNav]);
+
   return(
-    <section id='home' className="w-full h-[calc(100vh-73px)] lg:h-[calc(100vh-64px)]
+    <section ref={ref} id='home' className="w-full h-[calc(100vh-73px)] lg:h-[calc(100vh-64px)]
     flex flex-col lg:flex-row justify-center items-center">
       {/* Left Div */}
       <div className="w-full md:w-1/2 h-screen flex flex-1 items-center justify-center flex-col gap-4 md:gap-8 lg:gap-16 

@@ -1,9 +1,31 @@
 
+import { useEffect, useRef } from 'react';
 import background_img from './assets/about_me_background.jpg';
 
-export default function About() {
+type SectionProps  = {
+  setNav: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export default function About({ setNav }: SectionProps ) {
+
+  const ref = useRef<HTMLDivElement>(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setNav('about_me');
+        },
+        { threshold: 0.5 } // 50% visible
+      );
+  
+      if (ref.current) observer.observe(ref.current);
+      return () => {
+        if (ref.current) observer.unobserve(ref.current);
+      };
+    }, [setNav]);
+
   return(
-    <section id="about_me" className="w-full h-[calc(100vh-73px)] lg:h-[calc(100vh-64px)]
+    <section ref={ref} id="about_me" className="w-full h-[calc(100vh-73px)] lg:h-[calc(100vh-64px)]
 flex items-center justify-center py-8">
       <div className="w-[85vw] max-h-[85vh] bg-[var(--light-blue)] border-1 border-[var(--yellow)]
       flex flex-col gap-4 3xl:gap-0">

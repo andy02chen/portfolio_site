@@ -274,10 +274,10 @@ function App() {
       <Home setNav={setNav}/>
 
       {/* About Me */}
-      <About/>
+      <About setNav={setNav} />
 
       {/* Projects */}
-      <Projects/>
+      <Projects setNav={setNav} />
     </main>
   )
 }
