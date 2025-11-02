@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import proj1 from './assets/projects/proj1.png';
 import proj1_1 from './assets/projects/proj1_1.png';
@@ -98,6 +98,26 @@ export default function Projects() {
     }
   };
 
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-change images every 3 seconds
+  useEffect(() => {
+    if (projectSelected !== null && projects[projectSelected].image.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prev) => 
+          (prev + 1) % projects[projectSelected].image.length
+        );
+      }, 3000);
+      
+      return () => clearInterval(interval);
+    }
+  }, [projectSelected, currentImageIndex]);
+
+  // Reset image index when project changes
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [projectSelected]);
+
   return (
     <section
       id="projects"
@@ -196,7 +216,7 @@ export default function Projects() {
                     `}>
                     {String(project.id + 1).padStart(2, '0')}
                   </h1>
-                  <h1 className={`transition-colors duration-300
+                  <h1 className={`transition-colors duration-300 text-xs sm:text-base xl:text-2xl
                     ${projectSelected === project.id ? "text-[var(--dark-blue)] opacity-100" : ""}
                     xl:${projectSelected === null ? "" : "text-[var(--dark-blue)] xl:max-w-0 xl:opacity-0"}
                     `}>
@@ -297,18 +317,68 @@ export default function Projects() {
 
         {/* Right Div */}
         <div className={`w-full xl:w-[50%] 
-          transition-all h-[50%] xl:h-full duration-500 flex-1 xl:flex items-center justify-center mx-auto
+          transition-all h-[50%] xl:h-full duration-500 flex-1 xl:flex items-center justify-center mx-auto relative
           ${textOrImage === 'image'? 'flex' : 'hidden'} xl:flex`}>
-          <h1 className={`font-furore text-4xl
-            ${projectSelected !== null ? 'flex' : 'hidden'}
-            `}>
-            [ insert image ]
-          </h1>
-          <h1 className={`font-furore text-4xl
-            ${projectSelected === null ? 'flex' : 'hidden'}
-            `}>
-            [ Select a Project]
-          </h1>
+          {projectSelected !== null ? (
+            <>
+              <img 
+                src={projects[projectSelected].image[currentImageIndex]} 
+                alt={`${projects[projectSelected].title} - Image ${currentImageIndex + 1}`}
+                className="max-w-full max-h-full object-contain"
+              />
+              
+              {/* Image navigation controls */}
+              {projects[projectSelected].image.length > 1 && (
+                <>
+                  {/* Previous button */}
+                  <button
+                    onClick={() => setCurrentImageIndex((prev) => 
+                      prev === 0 ? projects[projectSelected].image.length - 1 : prev - 1
+                    )}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-[var(--yellow)]/80 hover:bg-[var(--yellow)]
+                    text-[var(--dark-blue)] w-10 h-10 rounded-full flex items-center justify-center transition-colors
+                    font-furore"
+                    aria-label="Previous image"
+                  >
+                    {`<`}
+                  </button>
+                  
+                  {/* Next button */}
+                  <button
+                    onClick={() => setCurrentImageIndex((prev) => 
+                      (prev + 1) % projects[projectSelected].image.length
+                    )}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-[var(--yellow)]/80 hover:bg-[var(--yellow)] 
+                    text-[var(--dark-blue)] w-10 h-10 rounded-full flex items-center justify-center transition-colors
+                    font-furore"
+                    aria-label="Next image"
+                  >
+                    {`>`}
+                  </button>
+                  
+                  {/* Image indicators */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    {projects[projectSelected].image.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-all ${
+                          index === currentImageIndex 
+                            ? 'bg-[var(--yellow)] w-6' 
+                            : 'bg-[var(--yellow)]/40 hover:bg-[var(--yellow)]/60'
+                        }`}
+                        aria-label={`Go to image ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
+            </>
+          ) : (
+            <h1 className="font-furore text-4xl">
+              [ Select a Project ]
+            </h1>
+          )}
         </div>
       </div>
     </section>
