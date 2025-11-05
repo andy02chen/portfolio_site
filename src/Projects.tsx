@@ -39,8 +39,13 @@ const projects = [
     The site allows users to track anime release schedules at a glance, making it easy to plan weekly viewing without having to remember every air time.<br><br>
     It also analyzes viewing habits and presents them through interactive charts and graphs, turning anime statistics into clear insights.<br><br>
     Through this project, I learned about UI and UX design, secure data handling, and database setup. I also gained experience building API endpoints, managing cookies for authentication, and deploying the full stack using cloud computing and virtual machines.<br><br>
-    The backend was designed to efficiently filter and organize user data, powering responsive analytics dashboards tailored to each profile.`,
-
+    The backend was designed to efficiently filter and organize user data, powering responsive analytics dashboards tailored to each profile.<br><br>
+    <a href="https://youtu.be/YzfnV34bwHo" target="_blank" rel="noopener noreferrer" class="underline text-[var(--light-yellow)] hover:text-yellow-400">
+        🔗 View Demo
+      </a><br><br>  
+    <a href="https://github.com/andy02chen/animecalendar" target="_blank" rel="noopener noreferrer" class="underline text-[var(--light-yellow)] hover:text-yellow-400">
+        🔗 View Code
+    </a>`,
     image: [proj1,proj1_1,proj1_2,proj1_3,proj1_4,proj1_5,proj1_6],
   },
   {
@@ -49,19 +54,33 @@ const projects = [
     description: `A fully functional Airtable-style web app built with the T3 stack that supports creating bases, tables, and dynamic columns.<br><br>
     Includes rich data management features such as inline cell editing, filtering, sorting, and full-text search. It is optimized with infinite scrolling and virtualized rendering for smooth performance even with large datasets.<br><br>
     This project was originally developed as part of a software development consultancy trial, completed while working full-time, and delivered within just two weeks.<br><br>
-    Through the process, I strengthened my skills in full-stack architecture, component-driven design, and learning unfamiliar technologies under tight deadlines.`,
+    Through the process, I strengthened my skills in full-stack architecture, component-driven design, and learning unfamiliar technologies under tight deadlines.<br><br>
+    <a href="https://airtable-clone-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" class="underline text-[var(--light-yellow)] hover:text-yellow-400">
+        🔗 View Live Demo
+      </a><br><br>
+      <a href="https://github.com/andy02chen/airtable_clone" target="_blank" rel="noopener noreferrer" class="underline text-[var(--light-yellow)] hover:text-yellow-400">
+        🔗 View Code
+    </a>`,
 
     image: [proj2_1,proj2_2,proj2_3,proj2_4,proj2_5],
   },
   {
     id: 2,
-    title: "Ichibankuji Rate calculator",
-    description: `A responsive web app that helps users calculate their chances of winning specific prizes in Ichiban Kuji, a popular Japanese lottery where every ticket guarantees a prize.<br><br>
-    Built with React and Tailwind CSS, the app features a clean and mobile-friendly interface designed for quick use directly in-store.<br><br>
-    Users can input the number of remaining prizes and total tickets to calculate real-time win rates. It supports dynamic prize tiers, live percentage updates, and automatic recalculations whenever inputs change.<br><br>
-    The interface was designed to be intuitive and beginner-friendly, with clear visual cues to make odds estimation simple and fast.<br><br>
-    This app was actually tested in-store, leading to one third-prize win for me and first and second prizes for a friend.`,
-    image: [proj3,proj3_1],
+    title: "Ichibankuji Rate Calculator",
+    description: `
+      A responsive web app that helps users calculate their chances of winning specific prizes in Ichiban Kuji, a popular Japanese lottery where every ticket guarantees a prize.<br><br>
+      Built with React and Tailwind CSS, the app features a clean and mobile-friendly interface designed for quick use directly in-store.<br><br>
+      Users can input the number of remaining prizes and total tickets to calculate real-time win rates. It supports dynamic prize tiers, live percentage updates, and automatic recalculations whenever inputs change.<br><br>
+      The interface was designed to be intuitive and beginner-friendly, with clear visual cues to make odds estimation simple and fast.<br><br>
+      This app was actually tested in-store, leading to one third-prize win for me and first and second prizes for a friend.<br><br>
+      <a href="https://ichibankuji-calculator.vercel.app/" target="_blank" rel="noopener noreferrer" class="underline text-[var(--light-yellow)] hover:text-yellow-400">
+        🔗 View Live Demo
+      </a><br><br>
+      <a href="https://github.com/andy02chen/ichibankuji_calculator" target="_blank" rel="noopener noreferrer" class="underline text-[var(--light-yellow)] hover:text-yellow-400">
+        🔗 View Code
+      </a>
+    `,
+    image: [proj3, proj3_1],
   },
   {
     id: 3,
@@ -70,7 +89,10 @@ const projects = [
     Developed a university eCommerce web app with features for product browsing, shopping cart management, and simulated checkout.<br><br>
     Implemented secure login with multiple roles and permissions.<br><br>
     Started as a duo and completed the majority of development, then added a third team member and delegated tasks to ensure meaningful contributions.<br><br>
-    Managed task distribution and team communication to keep the project on track.`,
+    Managed task distribution and team communication to keep the project on track.<br><br>
+    <a href="https://github.com/andy02chen/ISYS2160_AS2" target="_blank" rel="noopener noreferrer" class="underline text-[var(--light-yellow)] hover:text-yellow-400">
+        🔗 View Code
+    </a>`,
     image: [proj4,proj4_1,proj4_2,proj4_3,proj4_4,proj4_5,proj4_6,proj4_7],
   },
   {
@@ -80,7 +102,10 @@ const projects = [
     Developed a 2D game in Java as part of a semester project, applying object-oriented principles such as abstract classes and interfaces.<br><br>
     The game reads level configurations from text files, handles collision detection for walls and bomb explosions, and features animated sprites.<br><br>
     The coding portion of the assignment scored 94%, reflecting the quality and functionality of the implementation.
-    `,
+    <br><br>
+    <a href="https://github.com/andy02chen/bomberman" target="_blank" rel="noopener noreferrer" class="underline text-[var(--light-yellow)] hover:text-yellow-400">
+        🔗 View Code
+    </a>`,
     image: [proj5,proj5_1,proj5_2,proj5_3],
   },
 ]
@@ -252,7 +277,7 @@ export default function Projects({ setNav }: SectionProps) {
               ${projectSelected === null && textOrImage === 'text' ? 'flex flex-1 items-center justify-center' : 'hidden'}
               `}>
               <h1 className="font-furore text-4xl">
-                [ Select a Project]
+                [ Select a Project ]
               </h1>
             </div>
 
@@ -316,18 +341,18 @@ export default function Projects({ setNav }: SectionProps) {
                 </text>
                 
                 <foreignObject x="20" y="140" width="630" height="380">
-                  <div className="text-[var(--yellow)] text-md xl:text-sm font-['Ubuntu_Sans_Mono']
+                  <div className="text-[var(--yellow)] text-xl xl:text-sm font-['Ubuntu_Sans_Mono']
                   leading-relaxed p-2 overflow-y-auto h-full
                   scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-transparent
                   scrollbar-stable-gutter">
-                    {projectSelected !== null &&
-                      projects[projectSelected].description.split('<br>').map((line, i) => (
-                        <span key={i}>
-                          {line}
-                          <br />
-                        </span>
-                      ))
-                    }
+                    {projectSelected !== null && (
+                      <div
+                        className="text-[var(--yellow)] text-sm font-['Ubuntu_Sans_Mono'] leading-relaxed p-2"
+                        dangerouslySetInnerHTML={{
+                          __html: projects[projectSelected].description,
+                        }}
+                      />
+                    )}
                   </div>
                 </foreignObject>
 
